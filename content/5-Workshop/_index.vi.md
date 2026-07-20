@@ -1,4 +1,4 @@
----
+﻿---
 title: "Workshop"
 date: 2024-01-01
 weight: 5
@@ -6,28 +6,51 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+<div class="workshop-hero">
+  <h1>Video Localization Platform</h1>
+  <div class="workshop-hero-subtitle">Hệ thống Tự động hóa Dịch thuật và Lồng tiếng Video</div>
+</div>
 
+---
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+## Tổng quan
 
-#### Tổng quan
+Workshop này hướng dẫn toàn bộ kiến trúc và cách triển khai một nền tảng video localization trên cloud. Hệ thống tự động hóa các bước trích xuất phụ đề, dịch thuật, tạo giọng nói và render video cuối cùng, từ đó giúp quy trình xử lý video đa ngôn ngữ nhanh hơn, dễ mở rộng hơn và tiết kiệm chi phí hơn.
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Nội dung workshop được tổ chức bám sát cấu trúc thật của project trong repository này, bao gồm backend service, AI/ML pipeline, frontend application và quy trình deployment hoàn chỉnh.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+## Bạn sẽ xây dựng gì
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+Khi đi hết workshop, bạn sẽ hiểu cách xây dựng một hệ thống có thể:
 
-#### Nội dung
+- Upload và kiểm tra tính hợp lệ của file video
+- Trích xuất phụ đề bằng OCR hoặc Speech-to-Text
+- Dịch nội dung phụ đề bằng AI có nhận biết ngữ cảnh
+- Tạo audio lồng tiếng bằng các dịch vụ Text-to-Speech
+- Render video đầu ra với phụ đề và/hoặc voice-over
+- Theo dõi tiến độ xử lý theo thời gian thực
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+## Công nghệ cốt lõi
+
+- **Frontend**: React, TypeScript, Vite, Zustand
+- **Backend**: FastAPI, Celery, Redis, MySQL
+- **AI/ML**: PaddleOCR, Google Cloud Speech-to-Text, Google Gemini, gTTS, ElevenLabs
+- **Xử lý video**: FFmpeg, MoviePy
+- **Hạ tầng**: Amazon S3, Amazon RDS, Amazon SES, Docker
+
+---
+
+## Nội dung workshop
+
+1. [Video Localization Platform](5.1-Workshop-overview/)
+2. [Thiết lập môi trường phát triển](5.2-Environment/)
+3. [Phát triển Backend](5.3-Backend/)
+4. [AI/ML Pipeline](5.4-AI-Pipeline/)
+5. [Phát triển Frontend](5.5-Frontend/)
+6. [Triển khai hệ thống](5.6-Deployment/)
+
+---
+
+## Lộ trình học gợi ý
+
+Bạn nên bắt đầu từ phần tổng quan kiến trúc ở `5.1`, sau đó đi lần lượt qua thiết lập môi trường, backend, AI pipeline, frontend và cuối cùng là deployment. Thứ tự này bám sát cách project được ghép thành một hệ thống hoàn chỉnh trong thực tế.

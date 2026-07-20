@@ -1,31 +1,56 @@
----
+﻿---
 title: "Workshop"
 date: 2024-01-01
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+<div class="workshop-hero">
+  <h1>Video Localization Platform</h1>
+  <div class="workshop-hero-subtitle">Automated Video Translation and Dubbing System</div>
+</div>
 
-#### Overview
+---
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+## Overview
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+This workshop walks through the architecture and implementation of a cloud-native video localization platform. The system automates subtitle extraction, translation, voice generation, and final video rendering so multilingual video processing becomes faster, more scalable, and more cost-effective.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+The workshop is organized around the actual project structure in this repository, covering the backend services, AI/ML pipeline, frontend application, and deployment flow used to deliver the platform end to end.
 
-#### Content
+## What You Will Build
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+By following this workshop, you will understand how to build a system that can:
+
+- Upload and validate video files
+- Extract subtitles using OCR or Speech-to-Text
+- Translate subtitle content with context-aware AI
+- Generate dubbed audio using Text-to-Speech providers
+- Render final videos with subtitles and/or voice-over
+- Track processing progress in real time
+
+## Core Technologies
+
+- **Frontend**: React, TypeScript, Vite, Zustand
+- **Backend**: FastAPI, Celery, Redis, MySQL
+- **AI/ML**: PaddleOCR, Google Cloud Speech-to-Text, Google Gemini, gTTS, ElevenLabs
+- **Video Processing**: FFmpeg, MoviePy
+- **Infrastructure**: Amazon S3, Amazon RDS, Amazon SES, Docker
+
+---
+
+## Workshop Content
+
+1. [Video Localization Platform](5.1-Workshop-overview/)
+2. [Development Environment Setup](5.2-Environment/)
+3. [Backend Development](5.3-Backend/)
+4. [AI/ML Pipeline](5.4-AI-Pipeline/)
+5. [Frontend Development](5.5-Frontend/)
+6. [Deployment](5.6-Deployment/)
+
+---
+
+## Suggested Learning Path
+
+Start with the architecture overview in `5.1`, then move through environment setup, backend, AI pipeline, frontend, and finally deployment. This order matches the way the project is assembled in practice and makes it easier to connect each subsystem to the full workflow.
