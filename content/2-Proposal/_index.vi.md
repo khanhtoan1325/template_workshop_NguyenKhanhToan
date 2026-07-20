@@ -1,108 +1,261 @@
 ---
 title: "Bản đề xuất"
-date: 2024-01-01
+date: 2026-07-17
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
+layout: proposal
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+<div style="text-align: center; margin-bottom: 2rem; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Badge Header Top -->
+  <div style="display: inline-flex; align-items: center; gap: 6px; background: #eff6ff; color: #1d4ed8; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid #bfdbfe; margin-bottom: 12px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.71 1.1-1.18 1.1-1.18l-4.1-4.1s-.47.39-1.18 1.1zm10.5-12.5a6 6 0 0 0-8.5 0L2 8.5l7.5 7.5 4.5-4.5a6 6 0 0 0 0-8.5z"/></svg>
+    Dự án Đổi mới AWS Cloud
+  </div>
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+  <h1 style="margin: 8px 0; font-size: 2.2rem; font-weight: 700; color: #0f172a; letter-spacing: -0.02em;">Nền Tảng Bản Địa Hóa Video</h1>
+  <p style="color: #64748b; font-size: 1.05rem; margin-top: 0; font-weight: 400;">Hệ thống Tự động Hóa Dịch Thuật & Lồng Tiếng Video</p>
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+  <!-- Tags/Công nghệ chính -->
+  <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+    <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: #475569; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; border: 1px solid #e2e8f0;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19.125A6 6 0 0 0 16 7.5a8 8 0 0 0-15.5 2 4.5 4.5 0 0 0 4.5 9.625"/></svg>
+      AWS Serverless
+    </span>
+    <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: #475569; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; border: 1px solid #e2e8f0;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+      Tích hợp AI
+    </span>
+    <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: #475569; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; border: 1px solid #e2e8f0;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2.18" ry="2.18"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+      Xử lý Video
+    </span>
+  </div>
+</div>
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+<!-- Grid các Chỉ số chính (Metrics) -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 2.5rem; font-family: system-ui, -apple-system, sans-serif;">
+  
+  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 16px; text-align: center;">
+    <div style="color: #2563eb; margin-bottom: 8px; display: flex; justify-content: center;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </div>
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0f172a;">5-15 phút</div>
+    <div style="font-size: 0.8rem; color: #64748b; margin-top: 2px;">Thời gian xử lý/video</div>
+  </div>
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 16px; text-align: center;">
+    <div style="color: #16a34a; margin-bottom: 8px; display: flex; justify-content: center;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    </div>
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0f172a;">$17-30</div>
+    <div style="font-size: 0.8rem; color: #64748b; margin-top: 2px;">Chi phí hàng tháng</div>
+  </div>
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 16px; text-align: center;">
+    <div style="color: #d97706; margin-bottom: 8px; display: flex; justify-content: center;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+    </div>
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0f172a;">90%+</div>
+    <div style="font-size: 0.8rem; color: #64748b; margin-top: 2px;">Tiết kiệm chi phí</div>
+  </div>
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 16px; text-align: center;">
+    <div style="color: #9333ea; margin-bottom: 8px; display: flex; justify-content: center;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    </div>
+    <div style="font-size: 1.2rem; font-weight: 700; color: #0f172a;">14 tuần</div>
+    <div style="font-size: 0.8rem; color: #64748b; margin-top: 2px;">Thời gian triển khai</div>
+  </div>
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+</div>
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+<hr style="border: none; border-top: 1px solid #e2e8f0; margin: 2rem 0;" />
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+<div class="proposal-content">
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+## 1. Tóm tắt điều hành
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+Video Localization Platform là hệ thống dựa trên đám mây, được thiết kế để tự động hóa quy trình dịch thuật và lồng tiếng video cho những người tạo nội dung đa ngôn ngữ. Hệ thống tận dụng kiến trúc serverless trên AWS kết hợp với xử lý tác vụ bất đồng bộ thông qua Celery và Redis.
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+Nền tảng chấp nhận video được upload qua giao diện web, tự động trích xuất phụ đề sử dụng PaddleOCR (cho video có text nhúng) hoặc Google Cloud Speech-to-Text (cho nội dung chỉ có âm thanh), dịch nội dung trích xuất bằng Google Gemini API, và tạo audio lồng tiếng sử dụng gTTS hoặc ElevenLabs.
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+### Công nghệ cốt lõi
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+| Công nghệ | Mô tả |
+|-----------|--------|
+| AWS Serverless | Hạ tầng có thể mở rộng và tiết kiệm chi phí |
+| Celery + Redis | Xử lý tác vụ bất đồng bộ |
+| PaddleOCR | Trích xuất phụ đề thông minh |
+| Google Gemini | Dịch thuật đa ngôn ngữ |
+| ElevenLabs | Tổng hợp giọng nói tự nhiên |
+| FFmpeg | Render video chuyên nghiệp |
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+---
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+## 2. Tuyên bố vấn đề
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+### Những thách thức hiện tại
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+| Thách thức | Tác động |
+|------------|----------|
+| Trích xuất phụ đề thủ công | Quy trình theo dõi bằng mắt tốn thời gian |
+| Dịch thuật từng câu | 4-8 giờ mỗi video |
+| Đồng bộ thời gian | Công việc thủ công phức tạp |
+| Chi phí lồng tiếng | $100-500 mỗi phút |
+| Xử lý nhiều video | Không thể mở rộng |
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+### Giải pháp đề xuất
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+Pipeline tích hợp, end-to-end xử lý từ upload video đến render cuối cùng:
+
+1. **PaddleOCR** — Trích xuất phụ đề thông minh từ video có sẵn
+2. **Google Cloud STT** — Nhận dạng giọng nói cho video không có phụ đề
+3. **Google Gemini** — Dịch thuật nhận biết ngữ cảnh
+4. **ElevenLabs TTS** — Tổng hợp giọng nói tự nhiên cho lồng tiếng
+5. **FFmpeg Processing** — Render video chuyên nghiệp
+
+### Lợi ích và ROI
+
+| Chỉ số | Truyền thống | Nền tảng của chúng tôi |
+|--------|--------------|-------------------------|
+| Thời gian xử lý | 4-8 giờ/video | **5-15 phút/video** |
+| Chi phí hàng tháng | $500-2000 | **$17-30** |
+| Tính nhất quán dịch | Biến đổi | Đảm bảo |
+| Thời gian hoàn vốn | Không bao giờ | **1-2 tháng** |
+
+---
+
+## 3. Kiến trúc giải pháp
+
+Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với sự phân tách rõ ràng giữa frontend, backend API, workers bất đồng bộ, và các dịch vụ lưu trữ.
+
+![Video Localization Platform Architecture](/images/2-Proposal/aws_demo.png)
+
+### Các dịch vụ AWS được sử dụng
+
+| Dịch vụ | Mục đích |
+|---------|----------|
+| **Amazon S3** | Video đầu vào, video đầu ra, file phụ đề (.srt) — 3 bucket riêng biệt |
+| **Amazon RDS MySQL** | Thông tin video, người dùng, trạng thái xử lý |
+| **Amazon SES** | Thông báo email khi xử lý hoàn thành |
+| **AWS Region** | ap-southeast-1 (Singapore) |
+
+### Các dịch vụ bên thứ ba
+
+| Dịch vụ | Chức năng |
+|---------|----------|
+| **PaddleOCR** | Nhận dạng ký tự quang học để trích xuất phụ đề |
+| **Google Cloud STT** | Nhận dạng giọng nói cho video không có phụ đề |
+| **Google Gemini** | Dịch thuật nhận biết ngữ cảnh |
+| **ElevenLabs** | Tổng hợp giọng nói tự nhiên cho lồng tiếng |
+| **FFmpeg** | Xác thực định dạng và render video |
+
+### Thiết kế thành phần
+
+- **Frontend**: React 18 + TypeScript + Vite — upload video, trình chỉnh sửa phụ đề (auto-save), xem trước video
+- **Backend**: FastAPI + Celery — REST API, tác vụ bất đồng bộ, WebSocket cập nhật thời gian thực
+- **Pipeline**: 2 giai đoạn xử lý (OCR/STT → Dịch thuật → TTS → Render Video)
+- **Storage**: S3 (3 bucket theo chức năng) + Redis (cache & pub/sub)
+
+---
+
+## 4. Triển khai kỹ thuật
+
+### Các giai đoạn triển khai
+
+| Giai đoạn | Thời gian | Deliverables |
+|-----------|-----------|--------------|
+| **Nền tảng** | 4 tuần | Project setup, hạ tầng, basic upload |
+| **Stage 1** | 6 tuần | OCR/STT, dịch thuật, theo dõi tiến độ |
+| **Stage 2** | 4 tuần | TTS, video rendering, trình chỉnh sửa phụ đề |
+| **Hoàn thiện** | 2 tuần | Xử lý lỗi, tối ưu, tài liệu |
+
+### Tech Stack
+
+| Lớp | Công nghệ |
+|-----|-----------|
+| **Frontend** | React 18, TypeScript, Vite, Zustand, TailwindCSS, Radix UI |
+| **Backend** | Python 3.11+, FastAPI, Celery, Redis, SQLAlchemy, Pydantic |
+| **OCR/STT** | PaddleOCR, Google Cloud Speech-to-Text API |
+| **Dịch thuật** | Google Gemini API |
+| **TTS** | gTTS, ElevenLabs API |
+| **Video** | FFmpeg, MoviePy |
+| **Hạ tầng** | AWS S3, RDS MySQL, SES, Docker, Redis |
+
+---
+
+## 5. Ước tính ngân sách
+
+### Chi phí hàng tháng AWS (Development Tier)
+
+| Dịch vụ | Sử dụng | Chi phí |
+|---------|---------|---------|
+| Amazon S3 | 50 GB storage, 10 GB transfer | $1.50 |
+| Amazon RDS MySQL | db.t3.micro, 20 GB storage | $15.00 |
+| Amazon SES | 62,000 emails đầu tiên miễn phí | $0.00 |
+| Data Transfer | 10 GB outbound | $0.90 |
+| **Tổng AWS** | | **$17.40** |
+
+### Chi phí API bên thứ ba
+
+| Dịch vụ | Free Tier | Sử dụng trả phí |
+|---------|-----------|-----------------|
+| Google Cloud STT | 60 phút/tháng | $1.50/15 phút |
+| Google Gemini | 15 requests/phút | $0.001/1K ký tự |
+| ElevenLabs | 10,000 ký tự/tháng | $5.00/100K ký tự |
+| gTTS | Unlimited | $0.00 |
+
+**Tổng ước tính hàng tháng**: $20-30 tùy thuộc vào dung lượng sử dụng.
+
+---
+
+## 6. Đánh giá rủi ro
+
+### Ma trận rủi ro
+
+| Rủi ro | Ảnh hưởng | Xác suất | Giảm thiểu |
+|--------|-----------|-----------|------------|
+| Gemini API rate limiting | Cao | Trung bình | Exponential backoff, queue requests |
+| OCR quality trên phông phức tạp | Cao | Thấp | Fallback sang STT, cho phép sửa thủ công |
+| Video format không tương thích | Trung bình | Cao | FFprobe validation, auto-transcode |
+| Celery worker failure | Trung bình | Thấp | Redis persistence, automatic retry |
+| Cost overrun từ API usage | Trung bình | Trung bình | Usage monitoring, budget alerts |
+
+### Kế hoạch dự phòng
+
+- **Primary API failure**: Automatic fallback sang secondary provider
+- **Worker crash**: Các tác vụ vẫn queued cho đến khi worker recovery
+- **Database unavailable**: Return cached status, queue writes
+
+---
+
+## 7. Kết quả kỳ vọng
+
+### Deliverables kỹ thuật
+
+- Ứng dụng web cho video upload và chỉnh sửa phụ đề
+- Trích xuất phụ đề tự động sử dụng OCR hoặc STT
+- Dịch thuật nhận biết ngữ cảnh qua Gemini API
+- Tổng hợp giọng nói sử dụng gTTS hoặc ElevenLabs
+- Video rendering cuối cùng với phụ đề và/hoặc audio dubbed
+- Theo dõi tiến độ thời gian thực qua WebSocket
+- Thông báo email khi hoàn thành
+
+### Các định dạng đầu ra
+
+- Videos với soft subtitle overlay
+- Videos với hard subtitles (burned vào video stream)
+- Videos với dubbed audio
+- File phụ đề SRT ở cả ngôn ngữ nguồn và đích
+- Presigned download links cho nội dung đã hoàn thành
+
+### Giá trị thực tiễn
+
+- **Khả năng mở rộng đa ngôn ngữ** — Mở rộng phạm vi tiếp cận nội dung video toàn cầu
+- **Giảm chi phí** — Tiết kiệm 90%+ so với dịch vụ truyền thống
+- **Tích hợp quy trình** — Phù hợp với quy trình sản xuất nội dung
+- **Tính nhất quán** — Đồng nhất thuật ngữ trên tất cả video
+
+</div>
