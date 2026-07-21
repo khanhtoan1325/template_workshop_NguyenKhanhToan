@@ -34,8 +34,11 @@ Sau khi hoàn thành module này, bạn sẽ:
 
 ## Kiến trúc Frontend
 
-![Frontend Architecture](images/5-Workshop/5.5-Frontend/Fr_end.png)
 
+{{< image
+  src="images/5-Workshop/5.5-Frontend/Fr_end.png"
+  alt="Loi"
+>}}
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                        FRONTEND                              │
@@ -109,7 +112,11 @@ export const useVideoStore = create<VideoStore>()(
 
 ### Zustand State Flow
 
-![Zustand State Flow](images/5-Workshop/5.5-Frontend/Luong_state_Zustand.png)
+
+{{< image
+  src="images/5-Workshop/5.5-Frontend/Luong_state_Zustand_v2.png"
+  alt="Loi"
+>}}
 
 ---
 

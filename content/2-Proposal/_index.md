@@ -77,7 +77,7 @@ layout: proposal
 
 Video Localization Platform is a cloud-based system designed to automate the video translation and dubbing workflow for multilingual content creators. The system leverages serverless architecture on AWS combined with asynchronous task processing through Celery and Redis.
 
-The platform accepts videos uploaded via web interface, automatically extracts subtitles using PaddleOCR (for videos with embedded text) or Google Cloud Speech-to-Text (for audio-only content), translates extracted content using Google Gemini API, and generates dubbed audio using gTTS or ElevenLabs.
+The platform accepts videos uploaded via web interface, automatically extracts subtitles using PaddleOCR (for videos with embedded text) or Google Cloud Speech-to-Text (for audio-only content), translates extracted content primarily with AWS Translate with fallback through Google Cloud Translate v2 and Google Gemini API, and generates dubbed audio using gTTS or ElevenLabs.
 
 ### Core Technologies
 
@@ -86,7 +86,8 @@ The platform accepts videos uploaded via web interface, automatically extracts s
 | AWS Serverless | Scalable and cost-efficient infrastructure |
 | Celery + Redis | Asynchronous task processing |
 | PaddleOCR | Intelligent subtitle extraction |
-| Google Gemini | Multi-language translation |
+| AWS Translate | Primary scalable translation service |
+| Google Gemini | Context-aware fallback translation |
 | ElevenLabs | Natural voice synthesis |
 | FFmpeg | Professional video rendering |
 
@@ -129,7 +130,7 @@ An integrated, end-to-end pipeline processing from video upload to final renderi
 
 The platform follows a microservices-inspired architecture with clear separation between frontend, backend API, asynchronous workers, and storage services.
 
-![Video Localization Platform Architecture](images/2-Proposal/aws_demo.png)
+{{< image src="images/2-Proposal/aws.jpg" alt="Video Localization Platform Architecture" >}}
 
 ### AWS Services
 
@@ -138,6 +139,7 @@ The platform follows a microservices-inspired architecture with clear separation
 | **Amazon S3** | Input videos, output videos, subtitle files (.srt) — 3 dedicated buckets |
 | **Amazon RDS MySQL** | Video info, users, processing status |
 | **Amazon SES** | Email notifications on processing completion |
+| **AWS Translate** | Primary translation for multilingual subtitle content |
 | **AWS Region** | ap-southeast-1 (Singapore) |
 
 ### Third-Party Services
@@ -146,7 +148,8 @@ The platform follows a microservices-inspired architecture with clear separation
 |---------|----------|
 | **PaddleOCR** | Optical character recognition for subtitle extraction |
 | **Google Cloud STT** | Speech recognition for videos without subtitles |
-| **Google Gemini** | Context-aware translation |
+| **Google Cloud Translate v2** | Backup translation provider |
+| **Google Gemini** | Context-aware fallback translation |
 | **ElevenLabs** | Natural voice synthesis for dubbing |
 | **FFmpeg** | Format validation and video rendering |
 
@@ -177,7 +180,7 @@ The platform follows a microservices-inspired architecture with clear separation
 | **Frontend** | React 18, TypeScript, Vite, Zustand, TailwindCSS, Radix UI |
 | **Backend** | Python 3.11+, FastAPI, Celery, Redis, SQLAlchemy, Pydantic |
 | **OCR/STT** | PaddleOCR, Google Cloud Speech-to-Text API |
-| **Translation** | Google Gemini API |
+| **Translation** | AWS Translate, Google Cloud Translate v2, Google Gemini API |
 | **TTS** | gTTS, ElevenLabs API |
 | **Video** | FFmpeg, MoviePy |
 | **Infrastructure** | AWS S3, RDS MySQL, SES, Docker, Redis |
@@ -201,6 +204,8 @@ The platform follows a microservices-inspired architecture with clear separation
 | Service | Free Tier | Paid Usage |
 |---------|-----------|------------|
 | Google Cloud STT | 60 minutes/month | $1.50/15 minutes |
+| AWS Translate | Usage-based | Per translated character |
+| Google Cloud Translate v2 | Usage-based | Per translated character |
 | Google Gemini | 15 requests/minute | $0.001/1K chars |
 | ElevenLabs | 10,000 chars/month | $5.00/100K chars |
 | gTTS | Unlimited | $0.00 |
@@ -215,7 +220,7 @@ The platform follows a microservices-inspired architecture with clear separation
 
 | Risk | Impact | Probability | Mitigation |
 |------|--------|-------------|------------|
-| Gemini API rate limiting | High | Medium | Exponential backoff, queue requests |
+| AWS Translate or Gemini API rate limiting | High | Medium | Exponential backoff, queue requests, fallback provider |
 | Poor OCR with complex fonts | High | Low | STT fallback, manual editing allowed |
 | Incompatible video formats | Medium | High | FFprobe validation, auto-transcode |
 | Celery worker failure | Medium | Low | Redis persistence, automatic retry |
@@ -235,7 +240,7 @@ The platform follows a microservices-inspired architecture with clear separation
 
 - Web application for video upload and subtitle editing
 - Automatic subtitle extraction using OCR or STT
-- Context-aware translation via Gemini API
+- Multilingual translation with AWS Translate and fallback to Gemini/Google Cloud Translate
 - Voice synthesis using gTTS or ElevenLabs
 - Final video rendering with subtitles and/or dubbed audio
 - Real-time progress tracking via WebSocket

@@ -185,6 +185,9 @@ As a Software Engineering student with an orientation toward Backend Development
 
 #### Some Photos from the Event
 
-*Add your event photos here.*
+{{< image
+  src="images/events/event2.jpg"
+  alt="Cloud, AI Agent và Amazon Q trên AWS"
+>}}
 
 > Overall, the event brought me a lot of useful knowledge about Cloud, AI Agents, Amazon Q, and system security on AWS. It also gave me a clearer direction for learning and developing the skills needed to pursue Backend, Cloud, and AI in the future.

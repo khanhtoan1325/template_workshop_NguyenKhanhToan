@@ -34,7 +34,11 @@ Sau khi hoàn thành module này, bạn sẽ:
 
 ## Kiến trúc Pipeline
 
-![Pipeline AI-ML](images/5-Workshop/5.4-AI-Pipeline/Pipeline_AI-ML.png)
+
+{{< image
+  src="images/5-Workshop/5.4-AI-Pipeline/Pipeline AI - ML - v2.png"
+  alt="Loi"
+>}}
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -176,8 +180,12 @@ def extract_subtitles_from_video(
 
 ### OCR Process Flow
 
-![OCR](images/5-Workshop/5.4-AI-Pipeline/OCR.png)
 
+
+{{< image
+  src="images/5-Workshop/5.4-AI-Pipeline/OCR-v2.png"
+  alt="Loi"
+>}}
 ---
 
 ## Step 3: Speech-to-Text
@@ -300,8 +308,12 @@ def generate_audio_from_srt(
 
 ### Complete Data Flow
 
-![Data flow](images/5-Workshop/5.4-AI-Pipeline/Data_flow.png)
 
+
+{{< image
+  src="images/5-Workshop/5.4-AI-Pipeline/Data_flow.png"
+  alt="Loi"
+>}}
 ---
 
 ## Step 6: Video Rendering

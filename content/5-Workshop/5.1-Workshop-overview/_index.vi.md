@@ -35,7 +35,10 @@ Sau khi hoàn thành module này, bạn sẽ:
 
 ### Sơ đồ Kiến trúc Tổng quan
 
-![Kiến trúc hệ thống tổng quan](/images/5-Workshop/5.1-Workshop-overview/Kien-truc-he-thong-tong-quan.png)
+{{< image
+  src="images/5-Workshop/5.1-Workshop-overview/aws.jpg"
+  alt="AWS Vietnam Community Day 2026"
+>}}
 
 ### Tổng quan các thành phần
 
@@ -64,7 +67,11 @@ Sau khi hoàn thành module này, bạn sẽ:
 
 Nền tảng sử dụng thiết kế pipeline hai giai đoạn tách biệt xử lý tốn tài nguyên khỏi tương tác người dùng:
 
-![Luồng pipeline 2 giai đoạn](/images/5-Workshop/5.1-Workshop-overview/Luong-pipeline-2-giai-doan.png)
+{{< image
+  src="images/5-Workshop/5.1-Workshop-overview/Luong-pipeline-2-giai-doan.png"
+  alt="AWS Vietnam Community Day 2026"
+>}}
+
 
 #### Giai đoạn 1: Trích xuất và Dịch thuật
 

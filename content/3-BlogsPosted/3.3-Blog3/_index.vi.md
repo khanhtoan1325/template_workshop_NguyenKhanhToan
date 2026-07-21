@@ -12,6 +12,14 @@ Chào mọi người, trong bài viết này, mình sẽ chia sẻ về một gi
 
 Bài viết này phù hợp với những bạn đang quan tâm đến Generative AI, Agentic AI, DevOps, Cloud Migration và Application Modernization.
 
+### Sơ đồ Strands Agennts
+
+{{< image
+  src="images/blogs/blog3.jpg"
+  alt="STRANDS AGENTS"
+>}}
+
+
 ## 1. Vấn đề thực tế
 
 Trong quá trình chuyển đổi lên cloud, doanh nghiệp thường cần hiện đại hóa rất nhiều ứng dụng cũ. Những công việc này có thể bao gồm:
@@ -130,6 +138,12 @@ Qua bài viết này, mình thấy Generative AI không chỉ dùng để tạo 
 Sự kết hợp giữa Strands Agents, AWS Transform Custom và Amazon Bedrock AgentCore giúp xây dựng một hệ thống agentic AI có khả năng phân tích repository, xác định thay đổi cần thiết, tạo transformation mới và thực thi chuyển đổi ở quy mô lớn.
 
 Đây là một ví dụ thực tế về cách AWS đang ứng dụng Generative AI vào DevOps và Application Modernization, giúp doanh nghiệp giảm thời gian nâng cấp hệ thống, tăng tính nhất quán và đẩy nhanh quá trình chuyển đổi lên cloud.
+
+---
+### Link Bài
+
+* [TỰ ĐỘNG HÓA HIỆN ĐẠI HÓA ỨNG DỤNG VỚI STRANDS AGENTS, AWS TRANSFORM CUSTOM VÀ AMAZON BEDROCK AGENTCORE](https://www.facebook.com/groups/awsstudygroupfcj/posts/2210139623084331)
+---
 
 ### Nguồn tham khảo
 

@@ -12,6 +12,14 @@ Hello everyone. In this article, I will share a solution featured on the AWS Dev
 
 This article is suitable for those interested in Generative AI, Agentic AI, DevOps, Cloud Migration, and Application Modernization.
 
+### Strands Agennts Diagram
+
+{{< image
+  src="images/blogs/blog3.jpg"
+  alt="STRANDS AGENTS"
+>}}
+
+
 ## 1. Real-world problem
 
 During cloud transformation, organizations often need to modernize many legacy applications. Common tasks include:
@@ -130,6 +138,13 @@ Through this article, I see that Generative AI is not only useful for building c
 The combination of Strands Agents, AWS Transform Custom, and Amazon Bedrock AgentCore makes it possible to build an agentic AI system that can analyze repositories, identify necessary changes, create new transformations, and execute large-scale modernization workflows.
 
 This is a practical example of how AWS is applying Generative AI to DevOps and Application Modernization, helping organizations reduce upgrade time, increase consistency, and accelerate cloud transformation.
+
+---
+### Link Post
+
+* [AUTOMATE AND MODERNIZE YOUR APPLICATIONS WITH STRANDS AGENTS, AWS TRANSFORM CUSTOM, AND AMAZON BEDROCK AGENTCORE](https://www.facebook.com/groups/awsstudygroupfcj/posts/2210139623084331)
+
+---
 
 ### Reference
 

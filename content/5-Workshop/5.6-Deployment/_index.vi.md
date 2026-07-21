@@ -23,6 +23,12 @@ Sau khi hoàn thành module này, bạn sẽ:
 
 ---
 
+## Link Demo
+- https://drive.google.com/file/d/1pjXF8gTCsoc7X5n-5nWTakl2H9w0N4Zd/view?usp=drive_link
+
+---
+
+
 ## Điều kiện tiên quyết
 
 - Hoàn thành Workshops 5.1-5.5
@@ -33,8 +39,11 @@ Sau khi hoàn thành module này, bạn sẽ:
 
 ## Kiến trúc Production
 
-![AWS Architecture](images/5-Workshop/5.6-Deployment/AWS.png)
 
+{{< image
+  src="images/5-Workshop/5.6-Deployment/deployment.png"
+  alt="Loi"
+>}}
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                            AWS CLOUD                        │
@@ -243,8 +252,11 @@ jobs:
 
 ### CI/CD Pipeline Flow
 
-![CI/CD Pipeline](images/5-Workshop/5.6-Deployment/ci_cd.png)
 
+{{< image
+  src="images/5-Workshop/5.6-Deployment/ci_cd.png"
+  alt="Loi"
+>}}
 ---
 
 ## Step 9: Cost Optimization

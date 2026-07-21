@@ -36,7 +36,10 @@ By the end of this module, you will:
 
 The frontend orchestrates user interactions and displays real-time processing status:
 
-![Frontend Architecture](images/5-Workshop/5.5-Frontend/Fr_end.png)
+{{< image
+  src="images/5-Workshop/5.5-Frontend/Fr_end.png"
+  alt="Loi"
+>}}
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -235,7 +238,10 @@ export const useAuthStore = create<AuthStore>()(
 
 ### Zustand State Flow
 
-![Zustand State Flow](images/5-Workshop/5.5-Frontend/Luong_state_Zustand.png)
+{{< image
+  src="images/5-Workshop/5.5-Frontend/Luong_state_Zustand_v2.png"
+  alt="Loi"
+>}}
 
 ---
 

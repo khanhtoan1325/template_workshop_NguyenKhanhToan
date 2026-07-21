@@ -22,6 +22,10 @@ By the end of this module, you will:
 - Understand cost optimization strategies
 
 ---
+## Link Demo
+- https://drive.google.com/file/d/1pjXF8gTCsoc7X5n-5nWTakl2H9w0N4Zd/view?usp=drive_link
+
+---
 
 ## Prerequisites
 
@@ -35,7 +39,10 @@ By the end of this module, you will:
 
 Production deployment leverages AWS managed services:
 
-![AWS Architecture](images/5-Workshop/5.6-Deployment/AWS.png)
+{{< image
+  src="images/5-Workshop/5.6-Deployment/deployment.png"
+  alt="Loi"
+>}}
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -456,7 +463,10 @@ jobs:
 
 ### CI/CD Pipeline Flow
 
-![CI/CD Pipeline](images/5-Workshop/5.6-Deployment/ci_cd.png)
+{{< image
+  src="images/5-Workshop/5.6-Deployment/ci_cd.png"
+  alt="Loi"
+>}}
 
 ---
 

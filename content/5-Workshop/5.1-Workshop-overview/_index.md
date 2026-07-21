@@ -61,7 +61,11 @@ The Video Localization Platform automates this workflow through a cloud-native a
 
 ### High-Level Architecture Diagram
 
-![System Architecture Overview](/images/5-Workshop/5.1-Workshop-overview/Kien-truc-he-thong-tong-quan.png)
+{{< image
+  src="images/5-Workshop/5.1-Workshop-overview/aws.jpg"
+  alt="AWS Vietnam Community Day 2026"
+>}}
+
 
 ### Component Overview
 
@@ -90,7 +94,12 @@ The Video Localization Platform automates this workflow through a cloud-native a
 
 The platform uses a two-stage pipeline design that separates resource-intensive processing from user interaction:
 
-![Two-Stage Pipeline](/images/5-Workshop/5.1-Workshop-overview/Luong-pipeline-2-giai-doan.png)
+
+{{< image
+  src="images/5-Workshop/5.1-Workshop-overview/Luong-pipeline-2-giai-doan.png"
+  alt="AWS Vietnam Community Day 2026"
+>}}
+
 
 #### Stage 1: Extraction and Translation
 

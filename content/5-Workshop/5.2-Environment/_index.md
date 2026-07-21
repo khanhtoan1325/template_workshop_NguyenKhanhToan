@@ -39,79 +39,21 @@ Before setting up, understand how the components interact in local development:
 
 ### Docker Architecture Diagram
 
-![Docker Architecture](images/5-Workshop/5.2-Environment/Docker_Architecture.png)
+{{< image
+  src="images/5-Workshop/5.2-Environment/Docker_Architecture_V2.png"
+  alt="Loi"
+>}} 
 
-### Local Development Architecture Detail
-
-{{< mermaid >}}
-graph TB
-    subgraph Development["🐳 Docker Container"]
-        subgraph Data["Data Layer"]
-            Redis["🟢 Redis<br/>:6379"]
-            MySQL["🔵 MySQL<br/>:3306"]
-        end
-    end
-
-    subgraph Backend["⚙️ Backend (ocr-api)"]
-        API["🐍 FastAPI<br/>:8000"]
-        Celery["⚡ Celery<br/>Worker"]
-        WS["🔌 WebSocket<br/>:8000"]
-    end
-
-    subgraph Frontend["🎨 Frontend (myapporc)"]
-        React["⚛️ React<br/>:5173"]
-    end
-
-    React -->|"HTTP/WS| :5173 → :8000"| API
-    API -->|"Publish Tasks"| Redis
-    Celery -->|"Subscribe| :6379"| Redis
-    API -->|"SQL Queries| :3306"| MySQL
-    Celery -->|"Results"| Redis
-    API -->|"Pub/Sub"| WS
-    React -->|"Real-time| WS"| WS
-{{< /mermaid >}}
 
 ---
 
-## Ports & Endpoints
-
-### Ports & Endpoints Diagram
-
-{{< mermaid >}}
-graph LR
-    subgraph Clients["Client Layer"]
-        Browser["🌐 Browser<br/>localhost:5173"]
-    end
-
-    subgraph Services["Services"]
-        Frontend["🎨 Vite Dev Server<br/>:5173"]
-        API["🐍 FastAPI<br/>:8000"]
-        Swagger["📚 Swagger UI<br/>:8000/docs"]
-        WS["🔌 WebSocket<br/>:8000/ws"]
-    end
-
-    subgraph Containers["Docker Containers"]
-        RedisCLI["🟢 Redis<br/>:6379"]
-        MySQLCLI["🔵 MySQL<br/>:3306"]
-    end
-
-    Browser -->|"GET /api/v1/*| POST /upload| WS /ws"| API
-    Browser -->|"Hot Reload| HMR"| Frontend
-    API -->|"Redis Pub/Sub| :6379"| RedisCLI
-    API -->|"SQL| :3306"| MySQLCLI
-    CeleryW["⚡ Celery Worker<br/>(Host)"] -.->|"Tasks| :6379"| RedisCLI
-
-    style Browser fill:#f9f,stroke:#333,stroke-width:2px
-    style Frontend fill:#61dafb,stroke:#333,stroke-width:2px
-    style API fill:#009688,stroke:#333,stroke-width:2px,color:#fff
-    style Swagger fill:#85ea4d,stroke:#333,stroke-width:2px
-    style RedisCLI fill:#dc382d,stroke:#333,stroke-width:2px,color:#fff
-    style MySQLCLI fill:#00758f,stroke:#333,stroke-width:2px,color:#fff
-{{< /mermaid >}}
 
 ### Ports & Services Summary Diagram
 
-![Ports & Services Summary](images/5-Workshop/5.2-Environment/Ports_Services_Summary.png)
+{{< image
+  src="images/5-Workshop/5.2-Environment/Ports_Services_Summary.png"
+  alt="Loi"
+>}}
 
 ### Ports Table
 

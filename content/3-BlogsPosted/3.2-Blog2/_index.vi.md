@@ -41,6 +41,14 @@ Luồng hoạt động gồm các bước:
 * Kết quả quét được lưu trên Amazon S3.
 * Đội ngũ DevOps hoặc Security phân tích kết quả và xử lý các vấn đề bảo mật.
 
+
+### Sơ Đồ Kubescape, AWS Codebuild và AWS Codepipeline
+
+{{< image
+  src="images/blogs/blog2.jpg"
+  alt="AMAZON EKS"
+>}}
+
 ---
 
 ### Các dịch vụ AWS được sử dụng
@@ -100,7 +108,11 @@ Việc tích hợp Security Scan trực tiếp vào CI/CD giúp phát hiện cá
 Sự kết hợp giữa **Kubescape**, **AWS CodeBuild** và **AWS CodePipeline** giúp xây dựng quy trình DevSecOps tự động, hỗ trợ kiểm tra Security và Compliance liên tục cho Amazon EKS. Đây là giải pháp phù hợp cho các hệ thống Cloud-Native hiện đại, giúp nâng cao mức độ an toàn, giảm rủi ro và tối ưu quá trình vận hành.
 
 ---
+### Link Bài 
 
+* [TỰ ĐỘNG HÓA SECURITY SCAN TRÊN AMAZON EKS VỚI KUBESCAPE, AWS CODEBUILD VÀ AWS CODEPIPELINE](https://www.facebook.com/groups/awsstudygroupfcj/posts/2205463036885323)
+
+---
 ### Nguồn tham khảo
 
 * AWS Blog – Automating Security Scans for Amazon EKS using Kubescape

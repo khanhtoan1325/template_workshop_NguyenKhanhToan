@@ -15,9 +15,9 @@ pre: " <b> 1.11. </b> "
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
 | 6 | - **Amazon CloudWatch** <br> - Learn about CloudWatch Metrics <br> - Learn about CloudWatch Logs <br> - Learn about CloudWatch Alarms <br> - Note down monitoring best practices | 06/26/2026 | 06/26/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - Project nhóm – tự điền nội dung dự án nhóm | 06/29/2026 | 06/29/2026 | |
+| 2 |- **Project** <br> - Integrate Remotion Player into the video preview interface (configured canvas 1080x1920 (9:16), 30fps)<br>- Connect playerRef to Zustand store for triggerable play/pause/seekTo actions across components<br>- Integrate @designcombo/timeline: track drag-and-drop, zoom, and timeline scrolling<br>- Handle timeline events via @designcombo/events (RxJS-like pattern): PLAYER_PLAY, PLAYER_PAUSE, PLAYER_SEEK, TIMELINE_SEEK<br>- Add keyboard shortcuts: L (lock timeline), P (lock player), F (fullscreen)<br>- Integrate getVideoMetadata() to automatically compute video duration | 29/06/2026 | 29/06/2026 |<https://www.remotion.dev/> |
 | 3 | - **AWS CloudFormation** <br> - Learn about Infrastructure as Code (IaC) <br> - Learn about CloudFormation Templates <br> - Note down components: Resources, Parameters, Outputs <br> - Describe advantages of infra automation | 06/30/2026 | 06/30/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Project nhóm – tự điền nội dung dự án nhóm | 07/01/2026 | 07/01/2026 | |
+| 4 |- **Project** <br> - Amazon RDS MySQL – Database Configuration for the System<br>- Create a MySQL RDS instance in the ap-southeast-2 region<br>- Configure Security Group to allow EC2 inbound connections on port 3306<br>- Create database db_sub_video, set up user accounts, and assign permissions<br>- Connect Backend (SQLAlchemy) to the RDS endpoint<br>- Configure connection pool: pool_recycle=3600, pool_pre_ping=True<br>- Verify public/private access settings and disable public access for enhanced security | 01/07/2026 | 01/07/2026 |<https://cloudjourney.awsstudygroup.com/>  |
 
 ### Week 11 Achievements:
 * Configured basic CloudWatch Alarms to watch CPU usage and gathered metrics from instances.

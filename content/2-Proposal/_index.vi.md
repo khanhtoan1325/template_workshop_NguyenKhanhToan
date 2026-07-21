@@ -79,7 +79,7 @@ layout: proposal
 
 Video Localization Platform là hệ thống dựa trên đám mây, được thiết kế để tự động hóa quy trình dịch thuật và lồng tiếng video cho những người tạo nội dung đa ngôn ngữ. Hệ thống tận dụng kiến trúc serverless trên AWS kết hợp với xử lý tác vụ bất đồng bộ thông qua Celery và Redis.
 
-Nền tảng chấp nhận video được upload qua giao diện web, tự động trích xuất phụ đề sử dụng PaddleOCR (cho video có text nhúng) hoặc Google Cloud Speech-to-Text (cho nội dung chỉ có âm thanh), dịch nội dung trích xuất bằng Google Gemini API, và tạo audio lồng tiếng sử dụng gTTS hoặc ElevenLabs.
+Nền tảng chấp nhận video được upload qua giao diện web, tự động trích xuất phụ đề sử dụng PaddleOCR (cho video có text nhúng) hoặc Google Cloud Speech-to-Text (cho nội dung chỉ có âm thanh), dịch nội dung trích xuất ưu tiên bằng AWS Translate với cơ chế dự phòng qua Google Cloud Translate v2 và Google Gemini API, và tạo audio lồng tiếng sử dụng gTTS hoặc ElevenLabs.
 
 ### Công nghệ cốt lõi
 
@@ -88,7 +88,8 @@ Nền tảng chấp nhận video được upload qua giao diện web, tự độ
 | AWS Serverless | Hạ tầng có thể mở rộng và tiết kiệm chi phí |
 | Celery + Redis | Xử lý tác vụ bất đồng bộ |
 | PaddleOCR | Trích xuất phụ đề thông minh |
-| Google Gemini | Dịch thuật đa ngôn ngữ |
+| AWS Translate | Dịch thuật chính, có khả năng mở rộng |
+| Google Gemini | Dịch thuật dự phòng, nhận biết ngữ cảnh |
 | ElevenLabs | Tổng hợp giọng nói tự nhiên |
 | FFmpeg | Render video chuyên nghiệp |
 
@@ -112,9 +113,10 @@ Pipeline tích hợp, end-to-end xử lý từ upload video đến render cuối
 
 1. **PaddleOCR** — Trích xuất phụ đề thông minh từ video có sẵn
 2. **Google Cloud STT** — Nhận dạng giọng nói cho video không có phụ đề
-3. **Google Gemini** — Dịch thuật nhận biết ngữ cảnh
-4. **ElevenLabs TTS** — Tổng hợp giọng nói tự nhiên cho lồng tiếng
-5. **FFmpeg Processing** — Render video chuyên nghiệp
+3. **AWS Translate** — Dịch thuật chính cho nội dung phụ đề
+4. **Google Cloud Translate v2 / Google Gemini** — Cơ chế dịch dự phòng khi cần
+5. **ElevenLabs TTS** — Tổng hợp giọng nói tự nhiên cho lồng tiếng
+6. **FFmpeg Processing** — Render video chuyên nghiệp
 
 ### Lợi ích và ROI
 
@@ -131,7 +133,7 @@ Pipeline tích hợp, end-to-end xử lý từ upload video đến render cuối
 
 Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với sự phân tách rõ ràng giữa frontend, backend API, workers bất đồng bộ, và các dịch vụ lưu trữ.
 
-![Video Localization Platform Architecture](images/2-Proposal/aws_demo.png)
+{{< image src="images/2-Proposal/aws.jpg" alt="Video Localization Platform Architecture" >}}
 
 ### Các dịch vụ AWS được sử dụng
 
@@ -140,6 +142,7 @@ Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với
 | **Amazon S3** | Video đầu vào, video đầu ra, file phụ đề (.srt) — 3 bucket riêng biệt |
 | **Amazon RDS MySQL** | Thông tin video, người dùng, trạng thái xử lý |
 | **Amazon SES** | Thông báo email khi xử lý hoàn thành |
+| **AWS Translate** | Dịch thuật chính cho nội dung đa ngôn ngữ |
 | **AWS Region** | ap-southeast-1 (Singapore) |
 
 ### Các dịch vụ bên thứ ba
@@ -148,7 +151,8 @@ Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với
 |---------|----------|
 | **PaddleOCR** | Nhận dạng ký tự quang học để trích xuất phụ đề |
 | **Google Cloud STT** | Nhận dạng giọng nói cho video không có phụ đề |
-| **Google Gemini** | Dịch thuật nhận biết ngữ cảnh |
+| **Google Cloud Translate v2** | Dịch thuật dự phòng |
+| **Google Gemini** | Dịch thuật dự phòng, nhận biết ngữ cảnh |
 | **ElevenLabs** | Tổng hợp giọng nói tự nhiên cho lồng tiếng |
 | **FFmpeg** | Xác thực định dạng và render video |
 
@@ -179,7 +183,7 @@ Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với
 | **Frontend** | React 18, TypeScript, Vite, Zustand, TailwindCSS, Radix UI |
 | **Backend** | Python 3.11+, FastAPI, Celery, Redis, SQLAlchemy, Pydantic |
 | **OCR/STT** | PaddleOCR, Google Cloud Speech-to-Text API |
-| **Dịch thuật** | Google Gemini API |
+| **Dịch thuật** | AWS Translate, Google Cloud Translate v2, Google Gemini API |
 | **TTS** | gTTS, ElevenLabs API |
 | **Video** | FFmpeg, MoviePy |
 | **Hạ tầng** | AWS S3, RDS MySQL, SES, Docker, Redis |
@@ -203,6 +207,8 @@ Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với
 | Dịch vụ | Free Tier | Sử dụng trả phí |
 |---------|-----------|-----------------|
 | Google Cloud STT | 60 phút/tháng | $1.50/15 phút |
+| AWS Translate | Usage-based | Theo số ký tự dịch |
+| Google Cloud Translate v2 | Usage-based | Theo số ký tự dịch |
 | Google Gemini | 15 requests/phút | $0.001/1K ký tự |
 | ElevenLabs | 10,000 ký tự/tháng | $5.00/100K ký tự |
 | gTTS | Unlimited | $0.00 |
@@ -217,7 +223,7 @@ Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với
 
 | Rủi ro | Ảnh hưởng | Xác suất | Giảm thiểu |
 |--------|-----------|-----------|------------|
-| Gemini API rate limiting | Cao | Trung bình | Exponential backoff, queue requests |
+| AWS Translate hoặc Gemini API rate limiting | Cao | Trung bình | Exponential backoff, queue requests, fallback provider |
 | OCR quality trên phông phức tạp | Cao | Thấp | Fallback sang STT, cho phép sửa thủ công |
 | Video format không tương thích | Trung bình | Cao | FFprobe validation, auto-transcode |
 | Celery worker failure | Trung bình | Thấp | Redis persistence, automatic retry |
@@ -237,7 +243,7 @@ Nền tảng tuân theo kiến trúc lấy cảm hứng từ microservices với
 
 - Ứng dụng web cho video upload và chỉnh sửa phụ đề
 - Trích xuất phụ đề tự động sử dụng OCR hoặc STT
-- Dịch thuật nhận biết ngữ cảnh qua Gemini API
+- Dịch thuật đa ngôn ngữ với AWS Translate và cơ chế fallback sang Gemini/Google Cloud Translate
 - Tổng hợp giọng nói sử dụng gTTS hoặc ElevenLabs
 - Video rendering cuối cùng với phụ đề và/hoặc audio dubbed
 - Theo dõi tiến độ thời gian thực qua WebSocket

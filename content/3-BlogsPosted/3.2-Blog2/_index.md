@@ -41,6 +41,14 @@ The workflow consists of the following steps:
 * Scan reports are stored in Amazon S3.
 * DevOps or Security teams review the results and remediate identified vulnerabilities.
 
+
+### Kubescape, AWS Codebuild, and AWS Codepipeline diagrams
+
+{{< image
+  src="images/blogs/blog2.jpg"
+  alt="AMAZON EKS"
+>}}
+
 ---
 
 ### AWS Services Used
@@ -100,7 +108,10 @@ Security should not be treated as a final step after applications reach producti
 The combination of **Kubescape**, **AWS CodeBuild**, and **AWS CodePipeline** provides an effective DevSecOps solution for continuously assessing the security and compliance of Amazon EKS clusters. This approach helps organizations improve their cloud-native security posture, reduce operational risks, and build scalable, automated security workflows.
 
 ---
+### Link Post
 
+* [AUTOMATE SECURITY SCANNING ON AMAZON EKS WITH KUBESCAPE, AWS CODEBUILD, AND AWS CODEPIPELINE](https://www.facebook.com/groups/awsstudygroupfcj/posts/2205463036885323)
+---
 ### References
 
 * AWS Blog – Automating Security Scans for Amazon EKS using Kubescape

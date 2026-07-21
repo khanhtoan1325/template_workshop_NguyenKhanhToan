@@ -36,7 +36,11 @@ By the end of this module, you will:
 
 The AI/ML Pipeline is the core processing engine:
 
-![Pipeline AI-ML](images/5-Workshop/5.4-AI-Pipeline/Pipeline_AI-ML.png)
+{{< image
+  src="images/5-Workshop/5.4-AI-Pipeline/Pipeline AI - ML - v2.png"
+  alt="Loi"
+>}}
+
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -396,8 +400,10 @@ def subtitles_to_srt(subtitles: list) -> str:
 
 ### OCR Process Flow
 
-![OCR](images/5-Workshop/5.4-AI-Pipeline/OCR.png)
-
+{{< image
+  src="images/5-Workshop/5.4-AI-Pipeline/OCR-v2.png"
+  alt="Loi"
+>}}
 ---
 
 ## Step 3: Speech-to-Text
@@ -702,7 +708,10 @@ def generate_segment_audio(
 
 ### Complete Data Flow
 
-![Data flow](images/5-Workshop/5.4-AI-Pipeline/Data_flow.png)
+{{< image
+  src="images/5-Workshop/5.4-AI-Pipeline/Data_flow.png"
+  alt="Loi"
+>}}
 
 ---
 

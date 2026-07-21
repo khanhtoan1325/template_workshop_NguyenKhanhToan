@@ -72,8 +72,19 @@ A serverless Modern Data Lakehouse architecture provides three major advantages:
 
 This architecture also serves as a solid foundation for integrating Business Intelligence tools such as **Amazon QuickSight** or building Machine Learning pipelines using **Amazon SageMaker**.
 
----
+### Modern Data Lakehouse Architectural Diagram
 
+{{< image
+  src="images/blogs/blog1.jpg"
+  alt="Sơ đồ kiến trúc Modern Data Lakehouse"
+>}}
+---
+### Link Post
+
+* [Link Xây dựng Modern Data Lakehouse (Serverless) trên AWS: Bí kíp xử lý Big Data và tối ưu 80% chi phí truy vấn với S3, Glue và Athena](https://www.facebook.com/groups/awsstudygroupfcj/posts/2203105570454403)
+
+
+---
 ### References
 
 * AWS Lakehouse Architecture Guide  

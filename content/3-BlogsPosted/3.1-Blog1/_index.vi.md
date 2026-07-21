@@ -48,6 +48,19 @@ Amazon Athena tính phí dựa trên dung lượng dữ liệu bị quét (Data 
 
 Kiến trúc Modern Data Lakehouse Serverless này mang lại 3 lợi ích lớn: Không cần quản lý server (Zero Management), Tự động mở rộng (Auto-scaling) và Tiết kiệm chi phí tối đa. Đây là nền tảng cực kỳ vững chắc để tích hợp thêm các công cụ BI (Amazon QuickSight) hoặc làm nguồn cấp dữ liệu cho các mô hình Machine Learning (Amazon SageMaker).
 
+
+### Sơ đồ kiến trúc Modern Data Lakehouse
+
+{{< image
+  src="images/blogs/blog1.jpg"
+  alt="Sơ đồ kiến trúc Modern Data Lakehouse"
+>}}
+
+---
+### Link Bài Đăng
+
+* [Link Xây dựng Modern Data Lakehouse (Serverless) trên AWS: Bí kíp xử lý Big Data và tối ưu 80% chi phí truy vấn với S3, Glue và Athena](https://www.facebook.com/groups/awsstudygroupfcj/posts/2203105570454403)
+
 ---
 
 ### Nguồn tham khảo

@@ -151,6 +151,10 @@ As a Software Engineering student with an interest in Backend Development and Cl
 
 #### Some event photos
 
-*Add your event photos here.*
+{{< image
+  src="images/events/event1.jpg"
+  alt="AWS Vietnam Community Day 2026"
+>}}
+
 
 > Overall, the event provided useful technical knowledge, practical experience, and career inspiration for my future development in software engineering.

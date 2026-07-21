@@ -185,6 +185,9 @@ Là sinh viên ngành Software Engineering và có định hướng theo Backend
 
 #### Một số hình ảnh khi tham gia sự kiện
 
-*Thêm các hình ảnh của bạn tại đây.*
+{{< image
+  src="images/events/event2.jpg"
+  alt="Cloud, AI Agent và Amazon Q trên AWS"
+>}}
 
 > Tổng thể, sự kiện đã mang lại cho em nhiều kiến thức bổ ích về Cloud, AI Agent, Amazon Q và bảo mật hệ thống trên AWS. Sự kiện cũng giúp em có thêm định hướng rõ ràng hơn trong việc học tập và phát triển kỹ năng để theo đuổi lĩnh vực Backend, Cloud và AI trong tương lai.

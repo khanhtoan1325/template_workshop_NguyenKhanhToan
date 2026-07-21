@@ -98,7 +98,11 @@ app/api/v1/
     ├── user.py     # User management
     └── video.py    # Video operations
 ```
-![API Endpoints](images/5-Workshop/5.3-Backend/API_Endpoints_Chi_tiet.png)
+{{< image
+  src="images/5-Workshop/5.3-Backend/API_Endpoints_Chi_tiet.png"
+  alt="Loi"
+>}}
+
 
 ### Main Router Configuration
 
@@ -175,7 +179,10 @@ async def upload_video(
 
 ### Upload Video Sequence Flow
 
-![Sequence Upload Video](images/5-Workshop/5.3-Backend/Sequence_Upload_Video.png)
+!{{< image
+  src="images/5-Workshop/5.3-Backend/Sequence_Upload_Video.png"
+  alt="Loi"
+>}}
 
 ### Get Video Status
 
@@ -402,11 +409,17 @@ def process_video_stage_1(self, video_id: str, s3_key: str, original_filename: s
 
 ### Celery Task Flow
 
-![Celery Flow](images/5-Workshop/5.3-Backend/Luong_Celery.png)
+{{< image
+  src="images/5-Workshop/5.3-Backend/Luong_Celery.png"
+  alt="Loi"
+>}}
 
 ### Error Handling & Retry Mechanism
 
-![Error Handling & Retry](images/5-Workshop/5.3-Backend/Error_Handling_Retry.png)
+{{< image
+  src="images/5-Workshop/5.3-Backend/Error_Handling_Retry.png"
+  alt="Loi"
+>}}
 
 ---
 

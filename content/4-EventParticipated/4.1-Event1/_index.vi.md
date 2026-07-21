@@ -151,6 +151,10 @@ Là sinh viên ngành Software Engineering và có định hướng theo Backend
 
 #### Một số hình ảnh khi tham gia sự kiện
 
-*Thêm các hình ảnh của bạn tại đây.*
+{{< image
+  src="images/events/event1.jpg"
+  alt="AWS Vietnam Community Day 2026"
+>}}
+
 
 > Tổng thể, sự kiện đã mang lại cho em nhiều kiến thức kỹ thuật bổ ích, kinh nghiệm thực tế và định hướng rõ ràng hơn cho quá trình phát triển nghề nghiệp trong tương lai.
