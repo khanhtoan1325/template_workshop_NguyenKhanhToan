@@ -6,29 +6,58 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
+After participating in First Cloud AI Journey (FCAJ), I found the program well suited to students who are beginning their Cloud Computing journey. It combines foundational theory with hands-on AWS Console labs, allowing learners to explore services directly and understand how they work in practice.
 
+### 1. Overall Program Evaluation
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+#### 1.1. Training Content
 
-### Overall Evaluation
+The weekly learning path is clear and easy to follow. The first phase covers core concepts such as Cloud Computing, IAM, and cost management. Later weeks move into application deployment with EC2, Auto Scaling, Application Load Balancer, Route 53, S3, CloudFront, RDS, Docker, ECR, and ECS.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+This progression from foundations to deployment helped me connect the topics. Rather than seeing each AWS service in isolation, I gradually understood how they fit together in a complete system.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+#### 1.2. Hands-on Practice
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+The practical labs were the most valuable part of the program. Creating IAM Users, configuring EC2, building S3 buckets, setting up CloudFront, and running containers on ECS made the purpose of each service much clearer.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+Reviewing and removing resources after each lab also made me more mindful of AWS costs. This is an important habit for working with cloud infrastructure in real projects.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+#### 1.3. Support from Mentors and Organizers
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+Mentors and the organizing team provided timely and helpful support throughout the program. Instead of immediately giving an answer, mentors usually suggested an investigation path so I could identify the cause myself.
 
----
+For example, when I encountered S3 access or Security Group issues, I was guided to review policies, inbound rules, and logs. This approach helped me understand errors more deeply and become more confident with similar problems.
 
+#### 1.4. Relevance to My Major
+
+As a Software Engineering student, I found the program highly relevant because the topics are closely connected to application deployment. I learned not only about cloud infrastructure but also about how backend, frontend, databases, storage, and security work together in a project.
+
+### 2. OCR-CapCut Team Project
+
+The OCR-CapCut team project gave me an opportunity to apply the knowledge from the program to a specific problem. Because several project components were interdependent, the team needed to agree on APIs, the database schema, file-upload flow, and result storage from the beginning.
+
+The project highlighted the importance of discussing solutions before coding. It also helped me practice task allocation, progress updates, documentation, and demo preparation with the team.
+
+### 3. What I Valued Most
+
+What I valued most was gaining a clearer view of the process of deploying an application on AWS. Before the program, I only knew a few cloud concepts at a basic level. Through the lessons and labs, I learned how services work together—from access management and compute to data storage, content delivery, and container deployment.
+
+The program also helped me develop non-technical skills: documenting progress, asking clearer questions, and communicating with teammates when issues arise. These are important skills in a real working environment.
+
+### 4. Suggestions for Improvement
+
+1. Add a short checklist after each lab so learners can verify created resources and avoid leaving resources running unintentionally.
+
+2. Allocate more time to common troubleshooting cases, especially IAM permissions, Security Groups, ECS task logs, RDS connections, and CloudFront caching.
+
+3. Hold an architecture review before team projects begin, so groups can align on scope, AWS services, and task allocation.
+
+4. Provide clearer final-report criteria so students can prepare focused and relevant content.
+
+### 5. Continuing Learning Goals
+
+After the program, I would like to join more advanced AWS workshops, especially on containers, security, CI/CD, and system architecture. These are the areas I want to strengthen for future real-world projects.
+
+### 6. Conclusion
+
+Overall, First Cloud AI Journey is a valuable internship program for students starting with cloud. It helped me build AWS fundamentals, develop self-learning and teamwork skills, and gain a clearer direction for application deployment on cloud platforms.

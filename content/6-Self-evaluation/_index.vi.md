@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong suốt thời gian thực tập tại **AWS Vietnam** từ **04/05/2026** đến **27/07/2026**, 
+Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Viet Nam** từ **04/05/2026** đến **27/07/2026**, 
 tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường 
 vào môi trường làm việc thực tế.
 
@@ -28,18 +28,18 @@ dựa trên các tiêu chí dưới đây:
 
 | STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
 | --- | -------- | ----- | --- | --- | ---------- |
-| 1 | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về AWS (S3, RDS, EC2), triển khai hạ tầng thực tế, cấu hình Docker, IAM, Security Group | ✅ | ☐ | ☐ |
-| 2 | **Khả năng học hỏi** | Tiếp thu nhanh các dịch vụ AWS mới (RDS, S3 Presigned URL, boto3), tự nghiên cứu tài liệu AWS | ☐ | ✅ | ☐ |
-| 3 | **Chủ động** | Tự tìm hiểu cách cấu hình CORS S3, IAM policy, connection pool RDS mà không cần chờ hướng dẫn | ✅ | ☐ | ☐ |
-| 4 | **Tinh thần trách nhiệm** | Đảm bảo hạ tầng AWS hoạt động ổn định, xử lý kịp thời các lỗi kết nối S3/RDS khi hệ thống gặp sự cố | ✅ | ☐ | ☐ |
-| 5 | **Kỷ luật** | Tuân thủ giờ giấc, nội quy làm việc. Còn cần cải thiện tính đúng giờ trong một số buổi họp nhóm | ☐ | ☐ | ✅ |
-| 6 | **Tính cầu tiến** | Chủ động đọc thêm tài liệu AWS Well-Architected, tìm hiểu best practice bảo mật S3 và RDS | ☐ | ✅ | ☐ |
-| 7 | **Giao tiếp** | Báo cáo tiến độ cấu hình AWS rõ ràng cho nhóm, còn cần cải thiện cách trình bày kỹ thuật cho người không chuyên | ☐ | ✅ | ☐ |
-| 8 | **Hợp tác nhóm** | Phối hợp chặt chẽ với người làm Backend để kết nối EC2 với RDS và S3, hỗ trợ nhóm debug lỗi AWS | ✅ | ☐ | ☐ |
-| 9 | **Ứng xử chuyên nghiệp** | Tôn trọng đồng nghiệp, đóng góp ý kiến xây dựng, không đùn đẩy trách nhiệm khi gặp sự cố hạ tầng | ✅ | ☐ | ☐ |
-| 10 | **Tư duy giải quyết vấn đề** | Xử lý được các lỗi S3 AllAccessDisabled, RDS connection timeout, CORS error. Cần cải thiện tư duy phân tích nguyên nhân gốc rễ | ☐ | ✅ | ☐ |
-| 11 | **Đóng góp vào dự án/tổ chức** | Thiết lập toàn bộ hạ tầng AWS cho dự án OCRVID, giúp hệ thống lưu trữ và xử lý video hoạt động ổn định trên cloud | ✅ | ☐ | ☐ |
-| 12 | **Tổng thể** | Hoàn thành tốt nhiệm vụ phụ trách AWS, đóng góp thực chất vào dự án nhóm, tích lũy được nhiều kinh nghiệm thực tế | ✅ | ☐ | ☐ |
+| 1 | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về AWS (S3, RDS, EC2), triển khai hạ tầng thực tế, cấu hình Docker, IAM, Security Group | ☐ | x | ☐ |
+| 2 | **Khả năng học hỏi** | Tiếp thu nhanh các dịch vụ AWS mới (RDS, S3 Presigned URL, boto3), tự nghiên cứu tài liệu AWS | ☐ | x | ☐ |
+| 3 | **Chủ động** | Tự tìm hiểu cách cấu hình CORS S3, IAM policy, connection pool RDS mà không cần chờ hướng dẫn | x | ☐ | ☐ |
+| 4 | **Tinh thần trách nhiệm** | Đảm bảo hạ tầng AWS hoạt động ổn định, xử lý kịp thời các lỗi kết nối S3/RDS khi hệ thống gặp sự cố | x | ☐ | ☐ |
+| 5 | **Kỷ luật** | Tuân thủ giờ giấc, nội quy làm việc. Còn cần cải thiện tính đúng giờ trong một số buổi họp nhóm | ☐ | ☐ | x |
+| 6 | **Tính cầu tiến** | Chủ động đọc thêm tài liệu AWS Well-Architected, tìm hiểu best practice bảo mật S3 và RDS | ☐ | x | ☐ |
+| 7 | **Giao tiếp** | Báo cáo tiến độ cấu hình AWS rõ ràng cho nhóm, còn cần cải thiện cách trình bày kỹ thuật cho người không chuyên | ☐ | x | ☐ |
+| 8 | **Hợp tác nhóm** | Phối hợp chặt chẽ với người làm Backend để kết nối EC2 với RDS và S3, hỗ trợ nhóm debug lỗi AWS | x | ☐ | ☐ |
+| 9 | **Ứng xử chuyên nghiệp** | Tôn trọng đồng nghiệp, đóng góp ý kiến xây dựng, không đùn đẩy trách nhiệm khi gặp sự cố hạ tầng | x | ☐ | ☐ |
+| 10 | **Tư duy giải quyết vấn đề** | Xử lý được các lỗi S3 AllAccessDisabled, RDS connection timeout, CORS error. Cần cải thiện tư duy phân tích nguyên nhân gốc rễ | ☐ | x | ☐ |
+| 11 | **Đóng góp vào dự án/tổ chức** | Thiết lập toàn bộ hạ tầng AWS cho dự án OCRVID, giúp hệ thống lưu trữ và xử lý video hoạt động ổn định trên cloud | x | ☐ | ☐ |
+| 12 | **Tổng thể** | Hoàn thành tốt nhiệm vụ phụ trách AWS, đóng góp thực chất vào dự án nhóm, tích lũy được nhiều kinh nghiệm thực tế | x | ☐ | ☐ |
 
 ### Cần cải thiện
 
