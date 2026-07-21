@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 9"
-date: "2026-06-12"
+date: "2026-06-30"
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
@@ -15,10 +15,10 @@ pre: " <b> 1.9. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 6 | - **Amazon S3** <br> - Tìm hiểu Bucket và Object <br> - Ghi chú cách lưu trữ dữ liệu trên S3 <br> - Tìm hiểu Region của bucket <br> - Phân biệt object storage và block storage | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - **S3 Permission** <br> - Tìm hiểu Block Public Access <br> - Tìm hiểu Bucket Policy <br> - Ghi chú IAM Policy liên quan đến S3 <br> - Phân tích quyền public/private cho bucket | 15/06/2026 | 15/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - **S3 Static Website Hosting** <br> - Tìm hiểu hosting website tĩnh bằng S3 <br> - Ghi chú index document và error document <br> - Tìm hiểu public access khi host website <br> - Chuẩn bị nội dung mô tả static hosting | 16/06/2026 | 16/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **S3 CORS & Lifecycle** <br> - Tìm hiểu CORS trên S3 <br> - Ghi chú use case frontend gọi file từ bucket <br> - Tìm hiểu Lifecycle rule <br> - Tổng hợp kiến thức S3 cho báo cáo | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - **Amazon S3** <br> - Tìm hiểu Bucket và Object <br> - Ghi chú cách lưu trữ dữ liệu trên S3 <br> - Tìm hiểu Region của bucket <br> - Phân biệt object storage và block storage | 30/06/2026 | 30/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **S3 Permission** <br> - Tìm hiểu Block Public Access <br> - Tìm hiểu Bucket Policy <br> - Ghi chú IAM Policy liên quan đến S3 <br> - Phân tích quyền public/private cho bucket | 01/07/2026 | 01/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **S3 Static Website Hosting** <br> - Tìm hiểu hosting website tĩnh bằng S3 <br> - Ghi chú index document và error document <br> - Tìm hiểu public access khi host website <br> - Chuẩn bị nội dung mô tả static hosting | 02/07/2026 | 02/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **S3 CORS & Lifecycle** <br> - Tìm hiểu CORS trên S3 <br> - Ghi chú use case frontend gọi file từ bucket <br> - Tìm hiểu Lifecycle rule <br> - Tổng hợp kiến thức S3 cho báo cáo | 03/07/2026 | 03/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 9:
 * Khởi tạo thành công S3 Bucket và hiểu rõ sự khác biệt giữa Object Storage và Block Storage (EBS).

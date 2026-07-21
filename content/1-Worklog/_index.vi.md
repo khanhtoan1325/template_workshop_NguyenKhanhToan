@@ -7,7 +7,7 @@ pre: " <b> 1. </b> "
 ---
 
 
-Nhật ký thực tập trong suốt thời gian 12 tuần (từ ngày 17/04/2026 đến ngày 10/07/2026) được ghi nhận chi tiết theo từng tuần dưới đây:
+Nhật ký thực tập trong suốt thời gian 12 tuần (từ ngày 05/05/2026 đến ngày 27/07/2026) được ghi nhận chi tiết theo từng tuần dưới đây:
 
 **Tuần 1:** [AWS Cloud Foundation & Global Infrastructure](1.1-week1/)
 

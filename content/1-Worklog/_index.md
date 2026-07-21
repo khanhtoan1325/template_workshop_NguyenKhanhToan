@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-The internship worklog during the 12-week period (from April 17, 2026, to July 10, 2026) is recorded in detail for each week below:
+The internship log for the entire 12-week period (from May 5, 2026 to July 27, 2026) is recorded in detail week by week as follows:
 
 **Week 1:** [AWS Cloud Foundation & Global Infrastructure](1.1-week1/)
 

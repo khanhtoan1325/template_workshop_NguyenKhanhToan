@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 7"
-date: "2026-05-29"
+date: "2026-06-16"
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
@@ -14,10 +14,10 @@ pre: " <b> 1.7. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 6 | - **Amazon EC2** <br> - Tìm hiểu EC2 là gì <br> - Ghi chú vai trò của máy chủ ảo trên AWS <br> - Tìm hiểu Instance Type <br> - Tìm hiểu trạng thái EC2 instance | 29/05/2026 | 29/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - **AMI & Instance Type** <br> - Tìm hiểu Amazon Machine Image <br> - Phân biệt Amazon Linux, Ubuntu, Windows Server <br> - Tìm hiểu CPU, RAM, storage của instance type <br> - Ghi chú cách chọn instance phù hợp | 01/06/2026 | 01/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - **Key Pair & SSH** <br> - Tìm hiểu Key Pair <br> - Ghi chú public key/private key <br> - Tìm hiểu cách SSH vào EC2 <br> - Ghi chú các lỗi thường gặp khi SSH | 02/06/2026 | 02/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **EC2 Security Group** <br> - Cấu hình rule SSH/HTTP/HTTPS cho EC2 <br> - Ghi chú nguyên tắc không mở port bừa bãi <br> - Tìm hiểu public IP và private IP <br> - Tổng hợp quy trình tạo EC2 an toàn | 03/06/2026 | 03/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - **Amazon EC2** <br> - Tìm hiểu EC2 là gì <br> - Ghi chú vai trò của máy chủ ảo trên AWS <br> - Tìm hiểu Instance Type <br> - Tìm hiểu trạng thái EC2 instance | 16/06/2026 | 16/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **AMI & Instance Type** <br> - Tìm hiểu Amazon Machine Image <br> - Phân biệt Amazon Linux, Ubuntu, Windows Server <br> - Tìm hiểu CPU, RAM, storage của instance type <br> - Ghi chú cách chọn instance phù hợp | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **Key Pair & SSH** <br> - Tìm hiểu Key Pair <br> - Ghi chú public key/private key <br> - Tìm hiểu cách SSH vào EC2 <br> - Ghi chú các lỗi thường gặp khi SSH | 18/06/2026 | 18/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **EC2 Security Group** <br> - Cấu hình rule SSH/HTTP/HTTPS cho EC2 <br> - Ghi chú nguyên tắc không mở port bừa bãi <br> - Tìm hiểu public IP và private IP <br> - Tổng hợp quy trình tạo EC2 an toàn | 19/06/2026 | 19/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 7:
 * Khởi tạo thành công máy chủ ảo EC2 với hệ điều hành Amazon Linux / Ubuntu phù hợp.

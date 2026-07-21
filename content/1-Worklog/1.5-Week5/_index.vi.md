@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 5"
-date: "2026-05-15"
+date: "2026-06-02"
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
@@ -14,10 +14,10 @@ pre: " <b> 1.5. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 6 | - **Security Group** <br> - Tìm hiểu Security Group <br> - Phân biệt inbound rule và outbound rule <br> - Ghi chú cách mở port HTTP, HTTPS, SSH <br> - Tìm hiểu stateful firewall | 15/05/2026 | 15/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - **Network ACL** <br> - Tìm hiểu Network ACL <br> - Phân biệt Network ACL và Security Group <br> - Ghi chú inbound/outbound rule ở cấp subnet <br> - Tìm hiểu stateless firewall | 18/05/2026 | 18/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - **NAT Gateway** <br> - Tìm hiểu NAT Gateway <br> - Ghi chú cách private subnet truy cập Internet <br> - Phân biệt NAT Gateway và Internet Gateway <br> - Cập nhật sơ đồ private subnet | 19/05/2026 | 19/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **VPC Security Review** <br> - Tổng hợp VPC, Subnet, Route Table, Internet Gateway, NAT Gateway <br> - Tổng hợp Security Group và Network ACL <br> - So sánh public/private architecture <br> - Chuẩn bị phần minh chứng networking cho báo cáo | 20/05/2026 | 20/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - **Security Group** <br> - Tìm hiểu Security Group <br> - Phân biệt inbound rule và outbound rule <br> - Ghi chú cách mở port HTTP, HTTPS, SSH <br> - Tìm hiểu stateful firewall | 02/06/2026 | 02/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Network ACL** <br> - Tìm hiểu Network ACL <br> - Phân biệt Network ACL và Security Group <br> - Ghi chú inbound/outbound rule ở cấp subnet <br> - Tìm hiểu stateless firewall | 03/06/2026 | 03/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **NAT Gateway** <br> - Tìm hiểu NAT Gateway <br> - Ghi chú cách private subnet truy cập Internet <br> - Phân biệt NAT Gateway và Internet Gateway <br> - Cập nhật sơ đồ private subnet | 04/06/2026 | 04/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **VPC Security Review** <br> - Tổng hợp VPC, Subnet, Route Table, Internet Gateway, NAT Gateway <br> - Tổng hợp Security Group và Network ACL <br> - So sánh public/private architecture <br> - Chuẩn bị phần minh chứng networking cho báo cáo | 05/06/2026 | 05/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 5:
 * Phân biệt rõ sự khác nhau giữa Security Group (tác động ở cấp EC2 instance, stateful) và Network ACL (tác động ở cấp subnet, stateless).

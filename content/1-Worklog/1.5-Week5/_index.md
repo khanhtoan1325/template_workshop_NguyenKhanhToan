@@ -1,6 +1,6 @@
 ---
 title: "Week 5 Worklog"
-date: "2026-05-15"
+date: "2026-06-02"
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
@@ -14,10 +14,10 @@ pre: " <b> 1.5. </b> "
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 6 | - **Security Group** <br> - Learn about Security Group <br> - Differentiate inbound and outbound rules <br> - Note down how to open HTTP, HTTPS, SSH ports <br> - Learn about stateful firewall concept | 05/15/2026 | 05/15/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - **Network ACL** <br> - Learn about Network ACL <br> - Differentiate Network ACL and Security Group <br> - Note down subnet-level inbound/outbound rules <br> - Learn about stateless firewall concept | 05/18/2026 | 05/18/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - **NAT Gateway** <br> - Learn about NAT Gateway <br> - Note down how private subnets access the internet <br> - Differentiate NAT Gateway and Internet Gateway <br> - Update private subnet network diagram | 05/19/2026 | 05/19/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **VPC Security Review** <br> - Summarize VPC, Subnet, Route Table, IGW, and NAT Gateway <br> - Consolidate Security Group and Network ACL policies <br> - Differentiate public/private network architectures <br> - Prepare networking evidence for report | 05/20/2026 | 05/20/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - **Security Group** <br> - Learn about Security Group <br> - Differentiate inbound and outbound rules <br> - Note down how to open HTTP, HTTPS, SSH ports <br> - Learn about stateful firewall concept | 02/06/2026 | 02/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Network ACL** <br> - Learn about Network ACL <br> - Differentiate Network ACL and Security Group <br> - Note down subnet-level inbound/outbound rules <br> - Learn about stateless firewall concept | 03/06/2026 | 03/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **NAT Gateway** <br> - Learn about NAT Gateway <br> - Note down how private subnets access the internet <br> - Differentiate NAT Gateway and Internet Gateway <br> - Update private subnet network diagram | 04/06/2026 | 04/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **VPC Security Review** <br> - Summarize VPC, Subnet, Route Table, IGW, and NAT Gateway <br> - Consolidate Security Group and Network ACL policies <br> - Differentiate public/private network architectures <br> - Prepare networking evidence for report | 05/06/2026 | 05/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 5 Achievements:
 * Clearly distinguished between Security Groups (instance-level, stateful) and Network ACLs (subnet-level, stateless).

@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 3"
-date: "2026-05-01"
+date: "2026-05-19"
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
@@ -14,10 +14,10 @@ pre: " <b> 1.3. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 6 | - **AWS Billing** <br> - Tìm hiểu Billing Dashboard <br> - Kiểm tra cách AWS tính phí dịch vụ <br> - Tìm hiểu AWS Free Tier <br> - Ghi chú các lỗi dễ gây phát sinh chi phí | 01/05/2026 | 01/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - **AWS Budgets** <br> - Tìm hiểu AWS Budgets <br> - Ghi chú cách tạo budget theo tháng <br> - Tìm hiểu cảnh báo khi vượt ngưỡng chi phí <br> - Chuẩn bị nội dung kiểm soát chi phí | 04/05/2026 | 04/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - **Cost Explorer** <br> - Tìm hiểu Cost Explorer <br> - Kiểm tra chi phí theo service <br> - Ghi chú cách đọc biểu đồ chi phí <br> - Tìm hiểu dự báo chi phí sử dụng AWS | 05/05/2026 | 05/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **Cost Optimization** <br> - Tổng hợp các cách tối ưu chi phí <br> - Tìm hiểu cleanup resource sau khi thực hành <br> - Ghi chú các service cần tắt/xóa khi không dùng <br> - Viết phần báo cáo ngắn về quản lý chi phí AWS | 06/05/2026 | 06/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - **AWS Billing** <br> - Tìm hiểu Billing Dashboard <br> - Kiểm tra cách AWS tính phí dịch vụ <br> - Tìm hiểu AWS Free Tier <br> - Ghi chú các lỗi dễ gây phát sinh chi phí | 19/05/2026 | 19/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **AWS Budgets** <br> - Tìm hiểu AWS Budgets <br> - Ghi chú cách tạo budget theo tháng <br> - Tìm hiểu cảnh báo khi vượt ngưỡng chi phí <br> - Chuẩn bị nội dung kiểm soát chi phí | 20/05/2026 | 20/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **Cost Explorer** <br> - Tìm hiểu Cost Explorer <br> - Kiểm tra chi phí theo service <br> - Ghi chú cách đọc biểu đồ chi phí <br> - Tìm hiểu dự báo chi phí sử dụng AWS | 21/05/2026 | 21/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Cost Optimization** <br> - Tổng hợp các cách tối ưu chi phí <br> - Tìm hiểu cleanup resource sau khi thực hành <br> - Ghi chú các service cần tắt/xóa khi không dùng <br> - Viết phần báo cáo ngắn về quản lý chi phí AWS | 22/05/2026 | 22/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 3:
 * Biết cách sử dụng Billing Dashboard để xem hóa đơn và kiểm soát hạn mức Free Tier.

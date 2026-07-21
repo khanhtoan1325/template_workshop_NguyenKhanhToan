@@ -1,6 +1,6 @@
 ---
 title: "Week 7 Worklog"
-date: "2026-05-29"
+date: "2026-06-16"
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
@@ -14,10 +14,10 @@ pre: " <b> 1.7. </b> "
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 6 | - **Amazon EC2** <br> - Learn what EC2 is <br> - Note down the role of virtual servers in AWS <br> - Learn about Instance Types <br> - Learn about EC2 instance states | 05/29/2026 | 05/29/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - **AMI & Instance Type** <br> - Learn about Amazon Machine Image (AMI) <br> - Differentiate between Amazon Linux, Ubuntu, and Windows Server <br> - Learn about CPU, RAM, and storage specifications of Instance Types <br> - Note down how to select a suitable instance size | 06/01/2026 | 06/01/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - **Key Pair & SSH** <br> - Learn about Key Pairs <br> - Note down public key/private key concepts <br> - Learn how to SSH into EC2 <br> - Note down common SSH connection troubleshooting | 06/02/2026 | 06/02/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **EC2 Security Group** <br> - Configure SSH/HTTP/HTTPS rules for EC2 <br> - Note down the principle of not opening public ports excessively <br> - Differentiate public IP and private IP <br> - Consolidate secure EC2 launch practices | 06/03/2026 | 06/03/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - **Amazon EC2** <br> - Learn what EC2 is <br> - Note down the role of virtual servers in AWS <br> - Learn about Instance Types <br> - Learn about EC2 instance states | 16/06/2026 | 16/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **AMI & Instance Type** <br> - Learn about Amazon Machine Image (AMI) <br> - Differentiate between Amazon Linux, Ubuntu, and Windows Server <br> - Learn about CPU, RAM, and storage specifications of Instance Types <br> - Note down how to select a suitable instance size | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **Key Pair & SSH** <br> - Learn about Key Pairs <br> - Note down public key/private key concepts <br> - Learn how to SSH into EC2 <br> - Note down common SSH connection troubleshooting | 18/06/2026 | 18/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **EC2 Security Group** <br> - Configure SSH/HTTP/HTTPS rules for EC2 <br> - Note down the principle of not opening public ports excessively <br> - Differentiate public IP and private IP <br> - Consolidate secure EC2 launch practices | 19/06/2026 | 19/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 7 Achievements:
 * Successfully launched an EC2 instance using Amazon Linux/Ubuntu AMIs.

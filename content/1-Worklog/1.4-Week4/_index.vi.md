@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 4"
-date: "2026-05-08"
+date: "2026-05-26"
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
@@ -14,10 +14,10 @@ pre: " <b> 1.4. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 6 | - **Amazon VPC** <br> - Tìm hiểu Virtual Private Cloud <br> - Ghi chú vai trò của VPC trong AWS <br> - Tìm hiểu CIDR block <br> - Vẽ sơ đồ VPC cơ bản | 08/05/2026 | 08/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - **Subnet** <br> - Tìm hiểu Public Subnet và Private Subnet <br> - Phân biệt tài nguyên public/private <br> - Ghi chú cách chia subnet theo Availability Zone <br> - Cập nhật sơ đồ mạng VPC | 11/05/2026 | 11/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - **Route Table** <br> - Tìm hiểu Route Table <br> - Ghi chú route local và route Internet <br> - Phân biệt route table public/private <br> - Mô tả luồng truy cập mạng trong VPC | 12/05/2026 | 12/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **Internet Gateway** <br> - Tìm hiểu Internet Gateway <br> - Ghi chú cách public subnet truy cập Internet <br> - Phân tích route 0.0.0.0/0 <br> - Hoàn thiện ghi chú VPC cơ bản | 13/05/2026 | 13/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - **Amazon VPC** <br> - Tìm hiểu Virtual Private Cloud <br> - Ghi chú vai trò của VPC trong AWS <br> - Tìm hiểu CIDR block <br> - Vẽ sơ đồ VPC cơ bản | 26/05/2026 | 26/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Subnet** <br> - Tìm hiểu Public Subnet và Private Subnet <br> - Phân biệt tài nguyên public/private <br> - Ghi chú cách chia subnet theo Availability Zone <br> - Cập nhật sơ đồ mạng VPC | 27/05/2026 | 27/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **Route Table** <br> - Tìm hiểu Route Table <br> - Ghi chú route local và route Internet <br> - Phân biệt route table public/private <br> - Mô tả luồng truy cập mạng trong VPC | 28/05/2026 | 28/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Internet Gateway** <br> - Tìm hiểu Internet Gateway <br> - Ghi chú cách public subnet truy cập Internet <br> - Phân tích route 0.0.0.0/0 <br> - Hoàn thiện ghi chú VPC cơ bản | 29/05/2026 | 29/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 4:
 * Nắm vững kiến thức nền tảng về thiết lập địa chỉ mạng CIDR block trong VPC.
