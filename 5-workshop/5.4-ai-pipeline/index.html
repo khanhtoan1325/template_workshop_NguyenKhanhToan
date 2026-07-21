@@ -1,0 +1,754 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="thienlh@thienlu.com"><link rel=icon href=/template_workshop_NguyenKhanhToan/images/favicon.png type=image/png><title>AI/ML Pipeline :: Internship Report</title>
+<link href=/template_workshop_NguyenKhanhToan/css/nucleus.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/fontawesome-all.min.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/hybrid.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/featherlight.min.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/perfect-scrollbar.min.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/auto-complete.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/atom-one-dark-reasonable.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/theme.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/hugo-theme.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/theme-workshop.css?1784664106 rel=stylesheet><script src=/template_workshop_NguyenKhanhToan/js/jquery-3.3.1.min.js?1784664106></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/template_workshop_NguyenKhanhToan/5-workshop/5.4-ai-pipeline/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#fff;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/template_workshop_NguyenKhanhToan/js/lunr.min.js?1784664106></script><script type=text/javascript src=/template_workshop_NguyenKhanhToan/js/auto-complete.js?1784664106></script><script type=text/javascript>var baseurl="https://khanhtoan1325.github.io/template_workshop_NguyenKhanhToan/"</script><script type=text/javascript src=/template_workshop_NguyenKhanhToan/js/search.js?1784664106></script></div><div class=highlightable><ul class=topics><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/ title=Worklog class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/><b>1. </b>Worklog
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.1-week1/ title="Week 1 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.1-week1/><b>1.1. </b>Week 1 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.2-week2/ title="Week 2 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.2-week2/><b>1.2. </b>Week 2 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.3-week3/ title="Week 3 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.3-week3/><b>1.3. </b>Week 3 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.4-week4/ title="Week 4 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.4-week4/><b>1.4. </b>Week 4 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.5-week5/ title="Week 5 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.5-week5/><b>1.5. </b>Week 5 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.6-week6/ title="Week 6 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.6-week6/><b>1.6. </b>Week 6 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.7-week7/ title="Week 7 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.7-week7/><b>1.7. </b>Week 7 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.8-week8/ title="Week 8 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.8-week8/><b>1.8. </b>Week 8 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.9-week9/ title="Week 9 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.9-week9/><b>1.9. </b>Week 9 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.10-week10/ title="Week 10 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.10-week10/><b>1.10. </b>Week 10 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.11-week11/ title="Week 11 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.11-week11/><b>1.11. </b>Week 11 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.12-week12/ title="Week 12 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.12-week12/><b>1.12. </b>Week 12 Worklog
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/2-proposal/ title=Proposal class=dd-item><a href=/template_workshop_NguyenKhanhToan/2-proposal/><b>2. </b>Proposal
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/ title="Published Blog Posts" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/><b>3. </b>Published Blog Posts
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/3.1-blog1/ title="Building a Modern Data Lakehouse (Serverless) on AWS" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/3.1-blog1/><b>3.1. </b>Building a Modern Data Lakehouse (Serverless) on AWS
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/3.2-blog2/ title="Automating Security Scans on Amazon EKS" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/3.2-blog2/><b>3.2. </b>Automating Security Scans on Amazon EKS
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/3.3-blog3/ title="Modernizing applications with Strands Agents and Amazon Bedrock AgentCore" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/3.3-blog3/><b>3.3. </b>Modernizing applications with Strands Agents and Amazon Bedrock AgentCore
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/4-eventparticipated/ title="Events Participated" class=dd-item><a href=/template_workshop_NguyenKhanhToan/4-eventparticipated/><b>4. </b>Events Participated
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.1-event1/ title="Event 1" class=dd-item><a href=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.1-event1/><b>4.1. </b>Event 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.2-event2/ title="Event 2" class=dd-item><a href=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.2-event2/><b>4.2. </b>Event 2
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/ title=Workshop class="dd-item
+parent"><a href=/template_workshop_NguyenKhanhToan/5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.1-workshop-overview/ title="Video Localization Platform" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.1-workshop-overview/><b>5.1. </b>Video Localization Platform
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.2-environment/ title="Development Environment Setup" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.2-environment/><b>5.2. </b>Development Environment Setup
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.3-backend/ title="Backend Development" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.3-backend/><b>5.3. </b>Backend Development
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.4-ai-pipeline/ title="AI/ML Pipeline" class="dd-item
+active"><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.4-ai-pipeline/><b>5.4. </b>AI/ML Pipeline
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.5-frontend/ title="Frontend Development" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.5-frontend/><b>5.5. </b>Frontend Development
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.6-deployment/ title=Deployment class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.6-deployment/><b>5.6. </b>Deployment
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/6-self-evaluation/ title=Self-Assessment class=dd-item><a href=/template_workshop_NguyenKhanhToan/6-self-evaluation/><b>6. </b>Self-Assessment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/7-feedback/ title="Sharing and Feedback" class=dd-item><a href=/template_workshop_NguyenKhanhToan/7-feedback/><b>7. </b>Sharing and Feedback
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://awsstudygroup.com><i class='fab fa-aws'></i> AWS Study Group - Blog</a></li><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://khanhtoan1325.github.io/template_workshop_NguyenKhanhToan/5-workshop/5.4-ai-pipeline/ selected>English</option><option id=vi value=https://khanhtoan1325.github.io/template_workshop_NguyenKhanhToan/vi/5-workshop/5.4-ai-pipeline/>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><br><br><b>Last Updated</b><br><i><font color=orange>21-07-2026</font>
+</i></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud AI Journey</a>
+</i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=/template_workshop_NguyenKhanhToan/>Internship Report</a> > <a href=/template_workshop_NguyenKhanhToan/5-workshop/>Workshop</a> > AI/ML Pipeline</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#learning-objectives>Learning Objectives</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#architecture-context>Architecture Context</a></li><li><a href=#step-1-video-format-validation>Step 1: Video Format Validation</a><ul><li><a href=#why-validation-matters>Why Validation Matters</a></li><li><a href=#ffprobe-analysis>FFprobe Analysis</a></li><li><a href=#auto-transcode-implementation>Auto-Transcode Implementation</a></li></ul></li><li><a href=#step-2-ocr-subtitle-extraction>Step 2: OCR Subtitle Extraction</a><ul><li><a href=#paddleocr-configuration>PaddleOCR Configuration</a></li><li><a href=#video-frame-extraction-and-ocr>Video Frame Extraction and OCR</a></li><li><a href=#ocr-process-flow>OCR Process Flow</a></li></ul></li><li><a href=#hahahugoshortcode50s1hbhb>HAHAHUGOSHORTCODE50s1HBHB</a></li><li><a href=#step-3-speech-to-text>Step 3: Speech-to-Text</a><ul><li><a href=#google-cloud-stt-integration>Google Cloud STT Integration</a></li></ul></li><li><a href=#step-4-translation-with-gemini-api>Step 4: Translation with Gemini API</a><ul><li><a href=#gemini-api-integration>Gemini API Integration</a></li></ul></li><li><a href=#step-5-text-to-speech>Step 5: Text-to-Speech</a><ul><li><a href=#tts-module>TTS Module</a></li><li><a href=#complete-data-flow>Complete Data Flow</a></li></ul></li><li><a href=#step-6-video-rendering>Step 6: Video Rendering</a><ul><li><a href=#ffmpeg-video-composition>FFmpeg Video Composition</a></li></ul></li><li><a href=#step-7-error-handling-and-retry>Step 7: Error Handling and Retry</a><ul><li><a href=#exponential-backoff-implementation>Exponential Backoff Implementation</a></li></ul></li><li><a href=#code-references>Code References</a></li><li><a href=#summary>Summary</a></li><li><a href=#validation>Validation</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>AI/ML Pipeline</h1><h1 id=workshop-54-aiml-pipeline>Workshop 5.4: AI/ML Pipeline</h1><hr><h2 id=learning-objectives>Learning Objectives</h2><p>By the end of this module, you will:</p><ul><li>Understand subtitle extraction using PaddleOCR</li><li>Implement Speech-to-Text with Google Cloud</li><li>Configure translation with Google Gemini API</li><li>Generate voice-over with gTTS and ElevenLabs</li><li>Handle video format validation and transcoding</li><li>Implement error handling and retry mechanisms</li></ul><hr><h2 id=prerequisites>Prerequisites</h2><ul><li>Workshops 5.1-5.3 completed</li><li>Understanding of OCR concepts</li><li>Basic knowledge of video codecs</li><li>API keys configured</li></ul><hr><h2 id=architecture-context>Architecture Context</h2><p>The AI/ML Pipeline is the core processing engine:</p><img src=/template_workshop_NguyenKhanhToan/images/5-Workshop/5.4-AI-Pipeline/Pipeline%20AI%20-%20ML%20-%20v2.png alt=Loi><pre tabindex=0><code>┌─────────────────────────────────────────────────────────────────────┐
+│                        PROCESSING PIPELINE                          │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  ┌─────────┐    ┌──────────────┐    ┌──────────────┐              │
+│  │  Video  │───▶│  Validation  │───▶│   Format     │              │
+│  │  Input  │    │   (FFprobe) │    │  (FFmpeg)    │              │
+│  └─────────┘    └──────────────┘    └──────┬───────┘              │
+│                                             │                       │
+│                          ┌──────────────────┴──────────────────┐    │
+│                          ▼                                     ▼    │
+│              ┌───────────────────┐              ┌───────────────────┐│
+│              │   OCR Detection   │              │    STT Detection  ││
+│              │  (PaddleOCR)     │              │ (Google Cloud)   ││
+│              └─────────┬─────────┘              └─────────┬─────────┘│
+│                        │                                    │        │
+│                        └──────────────┬─────────────────────┘        │
+│                                     ▼                               │
+│                            ┌──────────────┐                         │
+│                            │ Translation  │                         │
+│                            │ (Gemini API) │                         │
+│                            └──────┬───────┘                         │
+│                                   ▼                                 │
+│                            ┌──────────────┐                         │
+│                            │     TTS     │                         │
+│                            │(gTTS/Eleven)│                         │
+│                            └──────┬───────┘                         │
+│                                   ▼                                 │
+│                            ┌──────────────┐                         │
+│                            │ Video Render │                         │
+│                            │   (FFmpeg)   │                         │
+│                            └──────┬───────┘                         │
+│                                   ▼                                 │
+│                            ┌──────────────┐                         │
+│                            │  S3 Upload  │                         │
+│                            └──────────────┘                         │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre><hr><h2 id=step-1-video-format-validation>Step 1: Video Format Validation</h2><h3 id=why-validation-matters>Why Validation Matters</h3><p>Before processing, videos must be validated to ensure:</p><ul><li>Compatible codecs for FFmpeg processing</li><li>Audio tracks exist for STT</li><li>Video is not corrupted</li></ul><h3 id=ffprobe-analysis>FFprobe Analysis</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/utils/video_validator.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> subprocess
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> typing <span style=color:#f92672>import</span> Dict, Tuple
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>analyze_video</span>(video_path: str) <span style=color:#f92672>-&gt;</span> Dict:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Analyze video file using FFprobe.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns dictionary with:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - container_format
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - format_name
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - duration
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - video_codec
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - audio_codec
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - has_audio
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - resolution
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - bitrate
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    cmd <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;ffprobe&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-v&#39;</span>, <span style=color:#e6db74>&#39;quiet&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-print_format&#39;</span>, <span style=color:#e6db74>&#39;json&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-show_format&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-show_streams&#39;</span>,
+</span></span><span style=display:flex><span>        video_path
+</span></span><span style=display:flex><span>    ]
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> subprocess<span style=color:#f92672>.</span>run(cmd, capture_output<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, text<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    data <span style=color:#f92672>=</span> json<span style=color:#f92672>.</span>loads(result<span style=color:#f92672>.</span>stdout)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Extract relevant information</span>
+</span></span><span style=display:flex><span>    analysis <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;container_format&#39;</span>: data<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;format&#39;</span>, {})<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;format_name&#39;</span>),
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;duration&#39;</span>: float(data<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;format&#39;</span>, {})<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;duration&#39;</span>, <span style=color:#ae81ff>0</span>)),
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;size&#39;</span>: int(data<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;format&#39;</span>, {})<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;size&#39;</span>, <span style=color:#ae81ff>0</span>)),
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Find video and audio streams</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> stream <span style=color:#f92672>in</span> data<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;streams&#39;</span>, []):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> stream[<span style=color:#e6db74>&#39;codec_type&#39;</span>] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;video&#39;</span>:
+</span></span><span style=display:flex><span>            analysis[<span style=color:#e6db74>&#39;video_codec&#39;</span>] <span style=color:#f92672>=</span> stream<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;codec_name&#39;</span>)
+</span></span><span style=display:flex><span>            analysis[<span style=color:#e6db74>&#39;resolution&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>stream<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;width&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74>x</span><span style=color:#e6db74>{</span>stream<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;height&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>            analysis[<span style=color:#e6db74>&#39;fps&#39;</span>] <span style=color:#f92672>=</span> eval(stream<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;r_frame_rate&#39;</span>, <span style=color:#e6db74>&#39;0&#39;</span>))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> stream[<span style=color:#e6db74>&#39;codec_type&#39;</span>] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;audio&#39;</span>:
+</span></span><span style=display:flex><span>            analysis[<span style=color:#e6db74>&#39;audio_codec&#39;</span>] <span style=color:#f92672>=</span> stream<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;codec_name&#39;</span>)
+</span></span><span style=display:flex><span>            analysis[<span style=color:#e6db74>&#39;has_audio&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;has_audio&#39;</span> <span style=color:#f92672>not</span> <span style=color:#f92672>in</span> analysis:
+</span></span><span style=display:flex><span>        analysis[<span style=color:#e6db74>&#39;has_audio&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> analysis
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>is_format_compatible</span>(analysis: Dict) <span style=color:#f92672>-&gt;</span> Tuple[bool, str]:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Check if video format is compatible with our processing pipeline.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns (is_compatible, reason)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    video_codec <span style=color:#f92672>=</span> analysis<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;video_codec&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>)<span style=color:#f92672>.</span>lower()
+</span></span><span style=display:flex><span>    audio_codec <span style=color:#f92672>=</span> analysis<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;audio_codec&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>)<span style=color:#f92672>.</span>lower()
+</span></span><span style=display:flex><span>    format_name <span style=color:#f92672>=</span> analysis<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;container_format&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>)<span style=color:#f92672>.</span>lower()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Check for compatible formats</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;h264&#39;</span> <span style=color:#f92672>in</span> video_codec <span style=color:#f92672>or</span> <span style=color:#e6db74>&#39;avc&#39;</span> <span style=color:#f92672>in</span> video_codec:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;aac&#39;</span> <span style=color:#f92672>in</span> audio_codec <span style=color:#f92672>or</span> <span style=color:#f92672>not</span> analysis<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;has_audio&#39;</span>):
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>True</span>, <span style=color:#e6db74>&#34;H.264/AAC MP4 - fully compatible&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>, <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Video codec compatible but audio (</span><span style=color:#e6db74>{</span>audio_codec<span style=color:#e6db74>}</span><span style=color:#e6db74>) needs conversion&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;hevc&#39;</span> <span style=color:#f92672>in</span> video_codec <span style=color:#f92672>or</span> <span style=color:#e6db74>&#39;h265&#39;</span> <span style=color:#f92672>in</span> video_codec:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>, <span style=color:#e6db74>&#34;HEVC/H.265 not supported, needs transcoding&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;vp9&#39;</span> <span style=color:#f92672>in</span> video_codec:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>, <span style=color:#e6db74>&#34;VP9 not supported, needs transcoding&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;prores&#39;</span> <span style=color:#f92672>in</span> video_codec:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>, <span style=color:#e6db74>&#34;ProRes not supported, needs transcoding&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>False</span>, <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Unknown codec: </span><span style=color:#e6db74>{</span>video_codec<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><h3 id=auto-transcode-implementation>Auto-Transcode Implementation</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/utils/video_validator.py (continued)</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>transcode_to_mp4_h264</span>(
+</span></span><span style=display:flex><span>    input_path: str, 
+</span></span><span style=display:flex><span>    output_path: str,
+</span></span><span style=display:flex><span>    force_transcode: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> bool:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Transcode video to H.264/AAC MP4 format.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Args:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        input_path: Path to input video
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        output_path: Path for output video
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        force_transcode: If True, always transcode. If False, use fast copy when possible.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        True if successful, False otherwise
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Ensure output directory exists</span>
+</span></span><span style=display:flex><span>    os<span style=color:#f92672>.</span>makedirs(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(output_path) <span style=color:#f92672>or</span> <span style=color:#e6db74>&#39;.&#39;</span>, exist_ok<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Build FFmpeg command</span>
+</span></span><span style=display:flex><span>    cmd <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;ffmpeg&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-i&#39;</span>, input_path,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-c:v&#39;</span>, <span style=color:#e6db74>&#39;libx264&#39;</span>,      <span style=color:#75715e># H.264 video codec</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-preset&#39;</span>, <span style=color:#e6db74>&#39;medium&#39;</span>,     <span style=color:#75715e># Encoding speed/quality tradeoff</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-crf&#39;</span>, <span style=color:#e6db74>&#39;23&#39;</span>,            <span style=color:#75715e># Constant quality (lower = better)</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-c:a&#39;</span>, <span style=color:#e6db74>&#39;aac&#39;</span>,          <span style=color:#75715e># AAC audio codec</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-b:a&#39;</span>, <span style=color:#e6db74>&#39;192k&#39;</span>,         <span style=color:#75715e># Audio bitrate</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-movflags&#39;</span>, <span style=color:#e6db74>&#39;+faststart&#39;</span>,  <span style=color:#75715e># Enable streaming</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-y&#39;</span>,                    <span style=color:#75715e># Overwrite output</span>
+</span></span><span style=display:flex><span>        output_path
+</span></span><span style=display:flex><span>    ]
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> subprocess<span style=color:#f92672>.</span>run(
+</span></span><span style=display:flex><span>        cmd,
+</span></span><span style=display:flex><span>        capture_output<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>        text<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> result<span style=color:#f92672>.</span>returncode <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>and</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>exists(output_path)
+</span></span></code></pre></div><hr><h2 id=step-2-ocr-subtitle-extraction>Step 2: OCR Subtitle Extraction</h2><h3 id=paddleocr-configuration>PaddleOCR Configuration</h3><p>The system uses a singleton pattern for efficient OCR model management:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/modules/video_process.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> paddleocr <span style=color:#f92672>import</span> PaddleOCR
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Singleton cache for OCR models</span>
+</span></span><span style=display:flex><span>_ocr_instances_cache <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>_default_lang <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;latin&#39;</span>  <span style=color:#75715e># Default for English, Vietnamese</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_ocr_instance</span>(
+</span></span><span style=display:flex><span>    lang: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>,
+</span></span><span style=display:flex><span>    det_db_thresh: float <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.2</span>,
+</span></span><span style=display:flex><span>    det_db_box_thresh: float <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>,
+</span></span><span style=display:flex><span>    use_angle_cls: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>,
+</span></span><span style=display:flex><span>    use_gpu: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Get or create OCR instance for the specified language.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Supported languages:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - &#39;ch&#39;: Chinese
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - &#39;latin&#39;: English, Vietnamese, etc.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - &#39;korean&#39;: Korean
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - &#39;japan&#39;: Japanese
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - &#39;arabic&#39;: Arabic
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>global</span> _ocr_instances_cache
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> lang <span style=color:#f92672>is</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>        lang <span style=color:#f92672>=</span> _default_lang
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Normalize language code</span>
+</span></span><span style=display:flex><span>    lang_map <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;en&#39;</span>: <span style=color:#e6db74>&#39;latin&#39;</span>, <span style=color:#e6db74>&#39;vi&#39;</span>: <span style=color:#e6db74>&#39;latin&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;zh&#39;</span>: <span style=color:#e6db74>&#39;ch&#39;</span>, <span style=color:#e6db74>&#39;ja&#39;</span>: <span style=color:#e6db74>&#39;japan&#39;</span>, <span style=color:#e6db74>&#39;ko&#39;</span>: <span style=color:#e6db74>&#39;korean&#39;</span>, <span style=color:#e6db74>&#39;ar&#39;</span>: <span style=color:#e6db74>&#39;arabic&#39;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    lang <span style=color:#f92672>=</span> lang_map<span style=color:#f92672>.</span>get(lang, lang)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    cache_key <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>lang<span style=color:#e6db74>}</span><span style=color:#e6db74>_</span><span style=color:#e6db74>{</span>det_db_thresh<span style=color:#e6db74>}</span><span style=color:#e6db74>_</span><span style=color:#e6db74>{</span>det_db_box_thresh<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> cache_key <span style=color:#f92672>not</span> <span style=color:#f92672>in</span> _ocr_instances_cache:
+</span></span><span style=display:flex><span>        _ocr_instances_cache[cache_key] <span style=color:#f92672>=</span> PaddleOCR(
+</span></span><span style=display:flex><span>            use_angle_cls<span style=color:#f92672>=</span>use_angle_cls,
+</span></span><span style=display:flex><span>            lang<span style=color:#f92672>=</span>lang,
+</span></span><span style=display:flex><span>            det_db_thresh<span style=color:#f92672>=</span>det_db_thresh,
+</span></span><span style=display:flex><span>            det_db_box_thresh<span style=color:#f92672>=</span>det_db_box_thresh,
+</span></span><span style=display:flex><span>            use_gpu<span style=color:#f92672>=</span>use_gpu,
+</span></span><span style=display:flex><span>            show_log<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> _ocr_instances_cache[cache_key]
+</span></span></code></pre></div><h3 id=video-frame-extraction-and-ocr>Video Frame Extraction and OCR</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>extract_subtitles_from_video</span>(
+</span></span><span style=display:flex><span>    video_path: str,
+</span></span><span style=display:flex><span>    target_lang: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>,
+</span></span><span style=display:flex><span>    fps_sample_rate: float <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Extract subtitles from video frames using OCR.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Args:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        video_path: Path to video file
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        target_lang: Target language for OCR model selection
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        fps_sample_rate: Extract one frame per N seconds (1.0 = 1 FPS)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        SRT formatted subtitle string
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> cv2
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> pysrt
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Open video</span>
+</span></span><span style=display:flex><span>    cap <span style=color:#f92672>=</span> cv2<span style=color:#f92672>.</span>VideoCapture(video_path)
+</span></span><span style=display:flex><span>    fps <span style=color:#f92672>=</span> cap<span style=color:#f92672>.</span>get(cv2<span style=color:#f92672>.</span>CAP_PROP_FPS)
+</span></span><span style=display:flex><span>    frame_interval <span style=color:#f92672>=</span> int(fps <span style=color:#f92672>*</span> fps_sample_rate)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Get OCR instance</span>
+</span></span><span style=display:flex><span>    ocr <span style=color:#f92672>=</span> get_ocr_instance(lang<span style=color:#f92672>=</span>target_lang <span style=color:#f92672>or</span> <span style=color:#e6db74>&#39;latin&#39;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    subtitles <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    frame_count <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    current_subtitle <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> cap<span style=color:#f92672>.</span>isOpened():
+</span></span><span style=display:flex><span>        ret, frame <span style=color:#f92672>=</span> cap<span style=color:#f92672>.</span>read()
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> ret:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>break</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        frame_count <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Only process every N frames</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> frame_count <span style=color:#f92672>%</span> frame_interval <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>continue</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Calculate timestamp</span>
+</span></span><span style=display:flex><span>        timestamp <span style=color:#f92672>=</span> cap<span style=color:#f92672>.</span>get(cv2<span style=color:#f92672>.</span>CAP_PROP_POS_MSEC) <span style=color:#f92672>/</span> <span style=color:#ae81ff>1000.0</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Run OCR on frame</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            result <span style=color:#f92672>=</span> ocr<span style=color:#f92672>.</span>ocr(frame, cls<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> result <span style=color:#f92672>and</span> result[<span style=color:#ae81ff>0</span>]:
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Extract text from OCR results</span>
+</span></span><span style=display:flex><span>                texts <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>for</span> line <span style=color:#f92672>in</span> result[<span style=color:#ae81ff>0</span>]:
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> line <span style=color:#f92672>and</span> len(line) <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>2</span>:
+</span></span><span style=display:flex><span>                        text <span style=color:#f92672>=</span> line[<span style=color:#ae81ff>1</span>][<span style=color:#ae81ff>0</span>]  <span style=color:#75715e># Text content</span>
+</span></span><span style=display:flex><span>                        confidence <span style=color:#f92672>=</span> line[<span style=color:#ae81ff>1</span>][<span style=color:#ae81ff>1</span>]  <span style=color:#75715e># Confidence score</span>
+</span></span><span style=display:flex><span>                        
+</span></span><span style=display:flex><span>                        <span style=color:#75715e># Filter low-confidence results</span>
+</span></span><span style=display:flex><span>                        <span style=color:#66d9ef>if</span> confidence <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0.5</span> <span style=color:#f92672>and</span> len(text<span style=color:#f92672>.</span>strip()) <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>2</span>:
+</span></span><span style=display:flex><span>                            texts<span style=color:#f92672>.</span>append(text<span style=color:#f92672>.</span>strip())
+</span></span><span style=display:flex><span>                
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> texts:
+</span></span><span style=display:flex><span>                    full_text <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39; &#39;</span><span style=color:#f92672>.</span>join(texts)
+</span></span><span style=display:flex><span>                    
+</span></span><span style=display:flex><span>                    <span style=color:#75715e># Merge with previous subtitle if close enough</span>
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> (current_subtitle <span style=color:#f92672>and</span> 
+</span></span><span style=display:flex><span>                        timestamp <span style=color:#f92672>-</span> current_subtitle[<span style=color:#e6db74>&#39;end&#39;</span>] <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0.5</span>):
+</span></span><span style=display:flex><span>                        current_subtitle[<span style=color:#e6db74>&#39;text&#39;</span>] <span style=color:#f92672>+=</span> <span style=color:#e6db74>&#39; &#39;</span> <span style=color:#f92672>+</span> full_text
+</span></span><span style=display:flex><span>                        current_subtitle[<span style=color:#e6db74>&#39;end&#39;</span>] <span style=color:#f92672>=</span> timestamp
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                        <span style=color:#66d9ef>if</span> current_subtitle:
+</span></span><span style=display:flex><span>                            subtitles<span style=color:#f92672>.</span>append(current_subtitle)
+</span></span><span style=display:flex><span>                        current_subtitle <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;start&#39;</span>: timestamp,
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;end&#39;</span>: timestamp <span style=color:#f92672>+</span> <span style=color:#ae81ff>2.0</span>,  <span style=color:#75715e># Default 2 second duration</span>
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;text&#39;</span>: full_text
+</span></span><span style=display:flex><span>                        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;OCR error at frame </span><span style=color:#e6db74>{</span>frame_count<span style=color:#e6db74>}</span><span style=color:#e6db74>: </span><span style=color:#e6db74>{</span>e<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>continue</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    cap<span style=color:#f92672>.</span>release()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Add last subtitle</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> current_subtitle:
+</span></span><span style=display:flex><span>        subtitles<span style=color:#f92672>.</span>append(current_subtitle)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Convert to SRT format</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> subtitles_to_srt(subtitles)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>subtitles_to_srt</span>(subtitles: list) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Convert subtitle list to SRT format.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> pysrt
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    srt_items <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i, sub <span style=color:#f92672>in</span> enumerate(subtitles, <span style=color:#ae81ff>1</span>):
+</span></span><span style=display:flex><span>        item <span style=color:#f92672>=</span> pysrt<span style=color:#f92672>.</span>SubtitleItem(
+</span></span><span style=display:flex><span>            index<span style=color:#f92672>=</span>i,
+</span></span><span style=display:flex><span>            start<span style=color:#f92672>=</span>pysrt<span style=color:#f92672>.</span>SubRipTime(seconds<span style=color:#f92672>=</span>sub[<span style=color:#e6db74>&#39;start&#39;</span>]),
+</span></span><span style=display:flex><span>            end<span style=color:#f92672>=</span>pysrt<span style=color:#f92672>.</span>SubRipTime(seconds<span style=color:#f92672>=</span>sub[<span style=color:#e6db74>&#39;end&#39;</span>]),
+</span></span><span style=display:flex><span>            text<span style=color:#f92672>=</span>sub[<span style=color:#e6db74>&#39;text&#39;</span>]
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>        srt_items<span style=color:#f92672>.</span>append(item)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Create SRT file</span>
+</span></span><span style=display:flex><span>    subs <span style=color:#f92672>=</span> pysrt<span style=color:#f92672>.</span>SubtitleFile(items<span style=color:#f92672>=</span>srt_items)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> str(subs)
+</span></span></code></pre></div><h3 id=ocr-process-flow>OCR Process Flow</h3><h2 id=hahahugoshortcode50s1hbhb><img src=/template_workshop_NguyenKhanhToan/images/5-Workshop/5.4-AI-Pipeline/OCR-v2.png alt=Loi></h2><h2 id=step-3-speech-to-text>Step 3: Speech-to-Text</h2><h3 id=google-cloud-stt-integration>Google Cloud STT Integration</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/modules/module/module_speech_to_text.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> google.cloud <span style=color:#f92672>import</span> speech_v1
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> google.cloud.speech_v1 <span style=color:#f92672>import</span> enums
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>process_audio_to_subtitles</span>(
+</span></span><span style=display:flex><span>    video_path: str,
+</span></span><span style=display:flex><span>    target_language: str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;vi-VN&#39;</span>
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Extract subtitles from video using Google Cloud Speech-to-Text.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Args:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        video_path: Path to video file
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        target_language: BCP-47 language tag
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        SRT formatted subtitle string
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Extract audio from video</span>
+</span></span><span style=display:flex><span>    audio_path <span style=color:#f92672>=</span> extract_audio_from_video(video_path)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Configure STT client</span>
+</span></span><span style=display:flex><span>    client <span style=color:#f92672>=</span> speech_v1<span style=color:#f92672>.</span>SpeechClient()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Read audio file</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>with</span> io<span style=color:#f92672>.</span>open(audio_path, <span style=color:#e6db74>&#39;rb&#39;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>        content <span style=color:#f92672>=</span> f<span style=color:#f92672>.</span>read()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    audio <span style=color:#f92672>=</span> speech_v1<span style=color:#f92672>.</span>RecognitionAudio(content<span style=color:#f92672>=</span>content)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Language code mapping</span>
+</span></span><span style=display:flex><span>    language_map <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;en&#39;</span>: <span style=color:#e6db74>&#39;en-US&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;vi&#39;</span>: <span style=color:#e6db74>&#39;vi-VN&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;zh&#39;</span>: <span style=color:#e6db74>&#39;zh-CN&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;ja&#39;</span>: <span style=color:#e6db74>&#39;ja-JP&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;ko&#39;</span>: <span style=color:#e6db74>&#39;ko-KR&#39;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    config <span style=color:#f92672>=</span> speech_v1<span style=color:#f92672>.</span>RecognitionConfig(
+</span></span><span style=display:flex><span>        encoding<span style=color:#f92672>=</span>enums<span style=color:#f92672>.</span>RecognitionConfig<span style=color:#f92672>.</span>AudioEncoding<span style=color:#f92672>.</span>LINEAR16,
+</span></span><span style=display:flex><span>        sample_rate_hertz<span style=color:#f92672>=</span><span style=color:#ae81ff>16000</span>,
+</span></span><span style=display:flex><span>        language_code<span style=color:#f92672>=</span>language_map<span style=color:#f92672>.</span>get(target_language, <span style=color:#e6db74>&#39;en-US&#39;</span>),
+</span></span><span style=display:flex><span>        enable_automatic_punctuation<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>        model<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;latest_long&#39;</span>,
+</span></span><span style=display:flex><span>        use_enhanced<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Perform transcription</span>
+</span></span><span style=display:flex><span>    operation <span style=color:#f92672>=</span> client<span style=color:#f92672>.</span>long_running_recognize(config<span style=color:#f92672>=</span>config, audio<span style=color:#f92672>=</span>audio)
+</span></span><span style=display:flex><span>    response <span style=color:#f92672>=</span> operation<span style=color:#f92672>.</span>result(timeout<span style=color:#f92672>=</span><span style=color:#ae81ff>600</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Convert to SRT</span>
+</span></span><span style=display:flex><span>    subtitles <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> result <span style=color:#f92672>in</span> response<span style=color:#f92672>.</span>results:
+</span></span><span style=display:flex><span>        alternative <span style=color:#f92672>=</span> result<span style=color:#f92672>.</span>alternatives[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>        words <span style=color:#f92672>=</span> alternative<span style=color:#f92672>.</span>words
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Group words into subtitle segments</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># (simplified - real implementation is more complex)</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> word_info <span style=color:#f92672>in</span> words:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Create subtitle entries based on word timing</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> srt_content
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>extract_audio_from_video</span>(video_path: str) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Extract audio track from video using FFmpeg.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> subprocess
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    audio_path <span style=color:#f92672>=</span> video_path<span style=color:#f92672>.</span>replace(<span style=color:#e6db74>&#39;.mp4&#39;</span>, <span style=color:#e6db74>&#39;.wav&#39;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    cmd <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;ffmpeg&#39;</span>, <span style=color:#e6db74>&#39;-i&#39;</span>, video_path,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-vn&#39;</span>,           <span style=color:#75715e># No video</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-acodec&#39;</span>, <span style=color:#e6db74>&#39;pcm_s16le&#39;</span>,  <span style=color:#75715e># PCM 16-bit</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-ar&#39;</span>, <span style=color:#e6db74>&#39;16000&#39;</span>,  <span style=color:#75715e># 16kHz sample rate</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-ac&#39;</span>, <span style=color:#e6db74>&#39;1&#39;</span>,      <span style=color:#75715e># Mono</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;-y&#39;</span>,            <span style=color:#75715e># Overwrite</span>
+</span></span><span style=display:flex><span>        audio_path
+</span></span><span style=display:flex><span>    ]
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    subprocess<span style=color:#f92672>.</span>run(cmd, capture_output<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> audio_path
+</span></span></code></pre></div><hr><h2 id=step-4-translation-with-gemini-api>Step 4: Translation with Gemini API</h2><h3 id=gemini-api-integration>Gemini API Integration</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/modules/video_process.py (continued)</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> google.generativeai <span style=color:#66d9ef>as</span> genai
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Configure Gemini</span>
+</span></span><span style=display:flex><span>genai<span style=color:#f92672>.</span>configure(api_key<span style=color:#f92672>=</span>os<span style=color:#f92672>.</span>getenv(<span style=color:#e6db74>&#39;API_KEY&#39;</span>))
+</span></span><span style=display:flex><span>model <span style=color:#f92672>=</span> genai<span style=color:#f92672>.</span>GenerativeModel(os<span style=color:#f92672>.</span>getenv(<span style=color:#e6db74>&#39;API_MODEL&#39;</span>, <span style=color:#e6db74>&#39;gemini-2.0-flash&#39;</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>translate_srt</span>(
+</span></span><span style=display:flex><span>    srt_content: str,
+</span></span><span style=display:flex><span>    target_language: str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;vi&#39;</span>,
+</span></span><span style=display:flex><span>    source_language: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Translate SRT content using Google Gemini API.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Args:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        srt_content: Original SRT content
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        target_language: Target language code
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        source_language: Source language code (auto-detect if None)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        Translated SRT content
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> pysrt
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Parse SRT</span>
+</span></span><span style=display:flex><span>    subs <span style=color:#f92672>=</span> pysrt<span style=color:#f92672>.</span>open(io<span style=color:#f92672>.</span>StringIO(srt_content))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Prepare batch for translation</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Translate in batches for efficiency</span>
+</span></span><span style=display:flex><span>    batch_size <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>    translated_subs <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>0</span>, len(subs), batch_size):
+</span></span><span style=display:flex><span>        batch <span style=color:#f92672>=</span> subs[i:i <span style=color:#f92672>+</span> batch_size]
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Create prompt for translation</span>
+</span></span><span style=display:flex><span>        prompt <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;&#34;&#34;Translate the following subtitles to </span><span style=color:#e6db74>{</span>target_language<span style=color:#e6db74>}</span><span style=color:#e6db74>.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Keep the same SRT format with index numbers, timestamps, and line breaks.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Only translate the text content, not the timing information.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Subtitles to translate:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span><span style=color:#e6db74>{</span>chr(<span style=color:#ae81ff>10</span>)<span style=color:#f92672>.</span>join([<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>sub<span style=color:#f92672>.</span>index<span style=color:#e6db74>}</span><span style=color:#e6db74>: </span><span style=color:#e6db74>{</span>sub<span style=color:#f92672>.</span>text<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#66d9ef>for</span> sub <span style=color:#f92672>in</span> batch])<span style=color:#e6db74>}</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Translation:&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Call Gemini API</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            response <span style=color:#f92672>=</span> model<span style=color:#f92672>.</span>generate_content(prompt)
+</span></span><span style=display:flex><span>            translated_text <span style=color:#f92672>=</span> response<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Parse translated text back to SRT format</span>
+</span></span><span style=display:flex><span>            translated_batch <span style=color:#f92672>=</span> parse_translated_srt(
+</span></span><span style=display:flex><span>                translated_text, 
+</span></span><span style=display:flex><span>                batch, 
+</span></span><span style=display:flex><span>                target_language
+</span></span><span style=display:flex><span>            )
+</span></span><span style=display:flex><span>            translated_subs<span style=color:#f92672>.</span>extend(translated_batch)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Translation error for batch </span><span style=color:#e6db74>{</span>i<span style=color:#f92672>//</span>batch_size<span style=color:#e6db74>}</span><span style=color:#e6db74>: </span><span style=color:#e6db74>{</span>e<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Fallback: keep original</span>
+</span></span><span style=display:flex><span>            translated_subs<span style=color:#f92672>.</span>extend(batch)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Create output SRT</span>
+</span></span><span style=display:flex><span>    output <span style=color:#f92672>=</span> pysrt<span style=color:#f92672>.</span>SubtitleFile(items<span style=color:#f92672>=</span>translated_subs)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> str(output)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>parse_translated_srt</span>(
+</span></span><span style=display:flex><span>    translated_text: str, 
+</span></span><span style=display:flex><span>    original_subs: list,
+</span></span><span style=display:flex><span>    target_language: str
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> list:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Parse Gemini response back to SRT items.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> pysrt
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    translated <span style=color:#f92672>=</span> pysrt<span style=color:#f92672>.</span>open(io<span style=color:#f92672>.</span>StringIO(translated_text))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Match by index and maintain original timing</span>
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i, sub <span style=color:#f92672>in</span> enumerate(translated):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> i <span style=color:#f92672>&lt;</span> len(original_subs):
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Use translated text with original timing</span>
+</span></span><span style=display:flex><span>            item <span style=color:#f92672>=</span> pysrt<span style=color:#f92672>.</span>SubtitleItem(
+</span></span><span style=display:flex><span>                index<span style=color:#f92672>=</span>i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>                start<span style=color:#f92672>=</span>original_subs[i]<span style=color:#f92672>.</span>start,
+</span></span><span style=display:flex><span>                end<span style=color:#f92672>=</span>original_subs[i]<span style=color:#f92672>.</span>end,
+</span></span><span style=display:flex><span>                text<span style=color:#f92672>=</span>sub<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span>            )
+</span></span><span style=display:flex><span>            result<span style=color:#f92672>.</span>append(item)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> result
+</span></span></code></pre></div><hr><h2 id=step-5-text-to-speech>Step 5: Text-to-Speech</h2><h3 id=tts-module>TTS Module</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/modules/module/module_text_to_speech_v4_parallel.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> asyncio
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> concurrent.futures <span style=color:#f92672>import</span> ThreadPoolExecutor
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>generate_audio_from_srt</span>(
+</span></span><span style=display:flex><span>    srt_content: str,
+</span></span><span style=display:flex><span>    output_path: str,
+</span></span><span style=display:flex><span>    provider: str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;gtts&#39;</span>,
+</span></span><span style=display:flex><span>    voice_id: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>,
+</span></span><span style=display:flex><span>    speed: float <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Generate TTS audio from SRT content.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Args:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        srt_content: SRT subtitle content
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        output_path: Output audio file path
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        provider: &#39;gtts&#39; or &#39;elevenlabs&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        voice_id: Voice ID for ElevenLabs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        speed: Speech speed multiplier
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        Path to generated audio file
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>import</span> pysrt
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Parse SRT</span>
+</span></span><span style=display:flex><span>    subs <span style=color:#f92672>=</span> pysrt<span style=color:#f92672>.</span>open(io<span style=color:#f92672>.</span>StringIO(srt_content))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Generate audio for each subtitle segment</span>
+</span></span><span style=display:flex><span>    audio_segments <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> sub <span style=color:#f92672>in</span> subs:
+</span></span><span style=display:flex><span>        segment_audio <span style=color:#f92672>=</span> generate_segment_audio(
+</span></span><span style=display:flex><span>            text<span style=color:#f92672>=</span>sub<span style=color:#f92672>.</span>text,
+</span></span><span style=display:flex><span>            provider<span style=color:#f92672>=</span>provider,
+</span></span><span style=display:flex><span>            voice_id<span style=color:#f92672>=</span>voice_id
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>        audio_segments<span style=color:#f92672>.</span>append({
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;audio&#39;</span>: segment_audio,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;start&#39;</span>: sub<span style=color:#f92672>.</span>start<span style=color:#f92672>.</span>ordinal,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;end&#39;</span>: sub<span style=color:#f92672>.</span>end<span style=color:#f92672>.</span>ordinal
+</span></span><span style=display:flex><span>        })
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Concatenate all segments</span>
+</span></span><span style=display:flex><span>    final_audio <span style=color:#f92672>=</span> concatenate_audio_segments(audio_segments)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Save final audio</span>
+</span></span><span style=display:flex><span>    final_audio<span style=color:#f92672>.</span>export(output_path, format<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;mp3&#39;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> output_path
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>generate_segment_audio</span>(
+</span></span><span style=display:flex><span>    text: str,
+</span></span><span style=display:flex><span>    provider: str,
+</span></span><span style=display:flex><span>    voice_id: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Generate audio for a single segment.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> provider <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;gtts&#39;</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>from</span> gtts <span style=color:#f92672>import</span> gTTS
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        tts <span style=color:#f92672>=</span> gTTS(text<span style=color:#f92672>=</span>text, lang<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;vi&#39;</span>)
+</span></span><span style=display:flex><span>        temp_path <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#39;/tmp/tts_</span><span style=color:#e6db74>{</span>uuid<span style=color:#f92672>.</span>uuid4()<span style=color:#e6db74>}</span><span style=color:#e6db74>.mp3&#39;</span>
+</span></span><span style=display:flex><span>        tts<span style=color:#f92672>.</span>save(temp_path)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> temp_path
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elif</span> provider <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;elevenlabs&#39;</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>import</span> requests
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># ElevenLabs API call</span>
+</span></span><span style=display:flex><span>        url <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;https://api.elevenlabs.io/v1/text-to-speech/</span><span style=color:#e6db74>{</span>voice_id<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        headers <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;Accept&#34;</span>: <span style=color:#e6db74>&#34;audio/mpeg&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;Content-Type&#34;</span>: <span style=color:#e6db74>&#34;application/json&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;xi-api-key&#34;</span>: os<span style=color:#f92672>.</span>getenv(<span style=color:#e6db74>&#39;ELEVENLABS_API_KEY&#39;</span>)
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        data <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;text&#34;</span>: text,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;voice_settings&#34;</span>: {
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;stability&#34;</span>: <span style=color:#ae81ff>0.5</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;similarity_boost&#34;</span>: <span style=color:#ae81ff>0.5</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        response <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>post(url, json<span style=color:#f92672>=</span>data, headers<span style=color:#f92672>=</span>headers)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        temp_path <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#39;/tmp/tts_</span><span style=color:#e6db74>{</span>uuid<span style=color:#f92672>.</span>uuid4()<span style=color:#e6db74>}</span><span style=color:#e6db74>.mp3&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>with</span> open(temp_path, <span style=color:#e6db74>&#39;wb&#39;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>            f<span style=color:#f92672>.</span>write(response<span style=color:#f92672>.</span>content)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> temp_path
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>ValueError</span>(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Unknown TTS provider: </span><span style=color:#e6db74>{</span>provider<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span></code></pre></div><h3 id=complete-data-flow>Complete Data Flow</h3><img src=/template_workshop_NguyenKhanhToan/images/5-Workshop/5.4-AI-Pipeline/Data_flow.png alt=Loi><hr><h2 id=step-6-video-rendering>Step 6: Video Rendering</h2><h3 id=ffmpeg-video-composition>FFmpeg Video Composition</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/modules/module/module_meger_video_v2.py</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>process_video_with_sync</span>(
+</span></span><span style=display:flex><span>    video_path: str,
+</span></span><span style=display:flex><span>    srt_path: str,
+</span></span><span style=display:flex><span>    audio_path: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>,
+</span></span><span style=display:flex><span>    output_path: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Merge video with subtitles and optional audio track.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Args:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        video_path: Input video path
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        srt_path: SRT subtitle file path
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        audio_path: Optional TTS audio path
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        output_path: Output video path
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Returns:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        Path to rendered video
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> output_path <span style=color:#f92672>is</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>        output_path <span style=color:#f92672>=</span> video_path<span style=color:#f92672>.</span>replace(<span style=color:#e6db74>&#39;.mp4&#39;</span>, <span style=color:#e6db74>&#39;_rendered.mp4&#39;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> audio_path:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Render with audio replacement</span>
+</span></span><span style=display:flex><span>        cmd <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;ffmpeg&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-i&#39;</span>, video_path,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-i&#39;</span>, audio_path,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-vf&#39;</span>, <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;subtitles=&#39;</span><span style=color:#e6db74>{</span>srt_path<span style=color:#e6db74>}</span><span style=color:#e6db74>&#39;&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-map&#39;</span>, <span style=color:#e6db74>&#39;0:v&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-map&#39;</span>, <span style=color:#e6db74>&#39;1:a&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-c:v&#39;</span>, <span style=color:#e6db74>&#39;libx264&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-c:a&#39;</span>, <span style=color:#e6db74>&#39;aac&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-shortest&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-y&#39;</span>,
+</span></span><span style=display:flex><span>            output_path
+</span></span><span style=display:flex><span>        ]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Render with soft subtitles (displayed but not burned in)</span>
+</span></span><span style=display:flex><span>        cmd <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;ffmpeg&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-i&#39;</span>, video_path,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-vf&#39;</span>, <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;subtitles=&#39;</span><span style=color:#e6db74>{</span>srt_path<span style=color:#e6db74>}</span><span style=color:#e6db74>&#39;&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-c:v&#39;</span>, <span style=color:#e6db74>&#39;libx264&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-c:a&#39;</span>, <span style=color:#e6db74>&#39;copy&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;-y&#39;</span>,
+</span></span><span style=display:flex><span>            output_path
+</span></span><span style=display:flex><span>        ]
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    result <span style=color:#f92672>=</span> subprocess<span style=color:#f92672>.</span>run(cmd, capture_output<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, text<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> result<span style=color:#f92672>.</span>returncode <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>Exception</span>(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Video rendering failed: </span><span style=color:#e6db74>{</span>result<span style=color:#f92672>.</span>stderr<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> output_path
+</span></span></code></pre></div><hr><h2 id=step-7-error-handling-and-retry>Step 7: Error Handling and Retry</h2><h3 id=exponential-backoff-implementation>Exponential Backoff Implementation</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/utils/provider_failure.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> time
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> random
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> functools <span style=color:#f92672>import</span> wraps
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>exponential_backoff</span>(
+</span></span><span style=display:flex><span>    max_retries: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>,
+</span></span><span style=display:flex><span>    base_delay: float <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>,
+</span></span><span style=display:flex><span>    max_delay: float <span style=color:#f92672>=</span> <span style=color:#ae81ff>60.0</span>,
+</span></span><span style=display:flex><span>    exponential_base: float <span style=color:#f92672>=</span> <span style=color:#ae81ff>2.0</span>
+</span></span><span style=display:flex><span>):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Decorator for exponential backoff retry logic.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Usage:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        @exponential_backoff(max_retries=3)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        def my_api_call():
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            ...
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>decorator</span>(func):
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>@wraps</span>(func)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>wrapper</span>(<span style=color:#f92672>*</span>args, <span style=color:#f92672>**</span>kwargs):
+</span></span><span style=display:flex><span>            last_exception <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> attempt <span style=color:#f92672>in</span> range(max_retries):
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>return</span> func(<span style=color:#f92672>*</span>args, <span style=color:#f92672>**</span>kwargs)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>                    last_exception <span style=color:#f92672>=</span> e
+</span></span><span style=display:flex><span>                    
+</span></span><span style=display:flex><span>                    <span style=color:#75715e># Calculate delay with jitter</span>
+</span></span><span style=display:flex><span>                    delay <span style=color:#f92672>=</span> min(
+</span></span><span style=display:flex><span>                        base_delay <span style=color:#f92672>*</span> (exponential_base <span style=color:#f92672>**</span> attempt),
+</span></span><span style=display:flex><span>                        max_delay
+</span></span><span style=display:flex><span>                    )
+</span></span><span style=display:flex><span>                    jitter <span style=color:#f92672>=</span> random<span style=color:#f92672>.</span>uniform(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0.1</span> <span style=color:#f92672>*</span> delay)
+</span></span><span style=display:flex><span>                    delay <span style=color:#f92672>+=</span> jitter
+</span></span><span style=display:flex><span>                    
+</span></span><span style=display:flex><span>                    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Attempt </span><span style=color:#e6db74>{</span>attempt <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span><span style=color:#e6db74>}</span><span style=color:#e6db74> failed: </span><span style=color:#e6db74>{</span>e<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                    print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Retrying in </span><span style=color:#e6db74>{</span>delay<span style=color:#e6db74>:</span><span style=color:#e6db74>.2f</span><span style=color:#e6db74>}</span><span style=color:#e6db74> seconds...&#34;</span>)
+</span></span><span style=display:flex><span>                    
+</span></span><span style=display:flex><span>                    time<span style=color:#f92672>.</span>sleep(delay)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># All retries exhausted</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>raise</span> last_exception
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> wrapper
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> decorator
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Usage with translation API</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@exponential_backoff</span>(max_retries<span style=color:#f92672>=</span><span style=color:#ae81ff>3</span>, base_delay<span style=color:#f92672>=</span><span style=color:#ae81ff>2.0</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>translate_with_retry</span>(text: str, target_lang: str) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> translate_srt(text, target_lang)
+</span></span></code></pre></div><hr><h2 id=code-references>Code References</h2><table><thead><tr><th style=text-align:left>Component</th><th style=text-align:left>File</th><th style=text-align:left>Description</th></tr></thead><tbody><tr><td style=text-align:left>Video Validation</td><td style=text-align:left><code>app/utils/video_validator.py</code></td><td style=text-align:left>FFprobe analysis, transcoding</td></tr><tr><td style=text-align:left>OCR Engine</td><td style=text-align:left><code>app/modules/video_process.py</code></td><td style=text-align:left>PaddleOCR integration</td></tr><tr><td style=text-align:left>STT Module</td><td style=text-align:left><code>app/modules/module/module_speech_to_text.py</code></td><td style=text-align:left>Google Cloud STT</td></tr><tr><td style=text-align:left>Translation</td><td style=text-align:left><code>app/modules/video_process.py</code></td><td style=text-align:left>Gemini API</td></tr><tr><td style=text-align:left>TTS Module</td><td style=text-align:left><code>app/modules/module/module_text_to_speech_v4_parallel.py</code></td><td style=text-align:left>gTTS/ElevenLabs</td></tr><tr><td style=text-align:left>Video Render</td><td style=text-align:left><code>app/modules/module/module_meger_video_v2.py</code></td><td style=text-align:left>FFmpeg composition</td></tr><tr><td style=text-align:left>Error Handling</td><td style=text-align:left><code>app/utils/provider_failure.py</code></td><td style=text-align:left>Exponential backoff</td></tr></tbody></table><hr><h2 id=summary>Summary</h2><p>In this module, you learned:</p><ul><li><strong>Video Validation</strong>: FFprobe analysis and FFmpeg transcoding</li><li><strong>OCR Extraction</strong>: PaddleOCR with singleton pattern</li><li><strong>Speech-to-Text</strong>: Google Cloud STT for audio transcription</li><li><strong>Translation</strong>: Gemini API with batch processing</li><li><strong>Text-to-Speech</strong>: gTTS and ElevenLabs integration</li><li><strong>Video Rendering</strong>: FFmpeg subtitle and audio composition</li><li><strong>Error Handling</strong>: Exponential backoff retry mechanism</li></ul><hr><h2 id=validation>Validation</h2><p>Test individual components:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Test video validation</span>
+</span></span><span style=display:flex><span>python -c <span style=color:#e6db74>&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>from app.utils.video_validator import analyze_video, is_format_compatible
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>analysis = analyze_video(&#39;test_video.mp4&#39;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>print(analysis)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>print(is_format_compatible(analysis))
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Test OCR extraction</span>
+</span></span><span style=display:flex><span>python -c <span style=color:#e6db74>&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>from app.modules.video_process import extract_subtitles_from_video
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>srt = extract_subtitles_from_video(&#39;test_video.mp4&#39;)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>print(srt[:500])
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/template_workshop_NguyenKhanhToan/5-workshop/5.3-backend/ title="Backend Development"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/template_workshop_NguyenKhanhToan/5-workshop/5.5-frontend/ title="Frontend Development" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/template_workshop_NguyenKhanhToan/js/clipboard.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/perfect-scrollbar.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/perfect-scrollbar.jquery.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/jquery.sticky.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/featherlight.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/highlight.pack.js?1784664106></script><script>hljs.initHighlightingOnLoad()</script><script src=/template_workshop_NguyenKhanhToan/js/modernizr.custom-3.6.0.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/learn.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/hugo-learn.js?1784664106></script><link href=/template_workshop_NguyenKhanhToan/mermaid/mermaid.css?1784664106 rel=stylesheet><script src=/template_workshop_NguyenKhanhToan/mermaid/mermaid.js?1784664106></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>

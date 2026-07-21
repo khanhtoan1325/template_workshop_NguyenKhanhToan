@@ -1,0 +1,496 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="thienlh@thienlu.com"><link rel=icon href=/template_workshop_NguyenKhanhToan/images/favicon.png type=image/png><title>Backend Development :: Internship Report</title>
+<link href=/template_workshop_NguyenKhanhToan/css/nucleus.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/fontawesome-all.min.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/hybrid.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/featherlight.min.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/perfect-scrollbar.min.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/auto-complete.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/atom-one-dark-reasonable.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/theme.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/hugo-theme.css?1784664106 rel=stylesheet><link href=/template_workshop_NguyenKhanhToan/css/theme-workshop.css?1784664106 rel=stylesheet><script src=/template_workshop_NguyenKhanhToan/js/jquery-3.3.1.min.js?1784664106></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/template_workshop_NguyenKhanhToan/5-workshop/5.3-backend/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#fff;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/template_workshop_NguyenKhanhToan/js/lunr.min.js?1784664106></script><script type=text/javascript src=/template_workshop_NguyenKhanhToan/js/auto-complete.js?1784664106></script><script type=text/javascript>var baseurl="https://khanhtoan1325.github.io/template_workshop_NguyenKhanhToan/"</script><script type=text/javascript src=/template_workshop_NguyenKhanhToan/js/search.js?1784664106></script></div><div class=highlightable><ul class=topics><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/ title=Worklog class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/><b>1. </b>Worklog
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.1-week1/ title="Week 1 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.1-week1/><b>1.1. </b>Week 1 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.2-week2/ title="Week 2 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.2-week2/><b>1.2. </b>Week 2 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.3-week3/ title="Week 3 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.3-week3/><b>1.3. </b>Week 3 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.4-week4/ title="Week 4 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.4-week4/><b>1.4. </b>Week 4 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.5-week5/ title="Week 5 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.5-week5/><b>1.5. </b>Week 5 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.6-week6/ title="Week 6 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.6-week6/><b>1.6. </b>Week 6 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.7-week7/ title="Week 7 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.7-week7/><b>1.7. </b>Week 7 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.8-week8/ title="Week 8 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.8-week8/><b>1.8. </b>Week 8 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.9-week9/ title="Week 9 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.9-week9/><b>1.9. </b>Week 9 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.10-week10/ title="Week 10 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.10-week10/><b>1.10. </b>Week 10 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.11-week11/ title="Week 11 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.11-week11/><b>1.11. </b>Week 11 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/1-worklog/1.12-week12/ title="Week 12 Worklog" class=dd-item><a href=/template_workshop_NguyenKhanhToan/1-worklog/1.12-week12/><b>1.12. </b>Week 12 Worklog
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/2-proposal/ title=Proposal class=dd-item><a href=/template_workshop_NguyenKhanhToan/2-proposal/><b>2. </b>Proposal
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/ title="Published Blog Posts" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/><b>3. </b>Published Blog Posts
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/3.1-blog1/ title="Building a Modern Data Lakehouse (Serverless) on AWS" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/3.1-blog1/><b>3.1. </b>Building a Modern Data Lakehouse (Serverless) on AWS
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/3.2-blog2/ title="Automating Security Scans on Amazon EKS" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/3.2-blog2/><b>3.2. </b>Automating Security Scans on Amazon EKS
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/3-blogsposted/3.3-blog3/ title="Modernizing applications with Strands Agents and Amazon Bedrock AgentCore" class=dd-item><a href=/template_workshop_NguyenKhanhToan/3-blogsposted/3.3-blog3/><b>3.3. </b>Modernizing applications with Strands Agents and Amazon Bedrock AgentCore
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/4-eventparticipated/ title="Events Participated" class=dd-item><a href=/template_workshop_NguyenKhanhToan/4-eventparticipated/><b>4. </b>Events Participated
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.1-event1/ title="Event 1" class=dd-item><a href=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.1-event1/><b>4.1. </b>Event 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.2-event2/ title="Event 2" class=dd-item><a href=/template_workshop_NguyenKhanhToan/4-eventparticipated/4.2-event2/><b>4.2. </b>Event 2
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/ title=Workshop class="dd-item
+parent"><a href=/template_workshop_NguyenKhanhToan/5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.1-workshop-overview/ title="Video Localization Platform" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.1-workshop-overview/><b>5.1. </b>Video Localization Platform
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.2-environment/ title="Development Environment Setup" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.2-environment/><b>5.2. </b>Development Environment Setup
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.3-backend/ title="Backend Development" class="dd-item
+active"><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.3-backend/><b>5.3. </b>Backend Development
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.4-ai-pipeline/ title="AI/ML Pipeline" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.4-ai-pipeline/><b>5.4. </b>AI/ML Pipeline
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.5-frontend/ title="Frontend Development" class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.5-frontend/><b>5.5. </b>Frontend Development
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/5-workshop/5.6-deployment/ title=Deployment class=dd-item><a href=/template_workshop_NguyenKhanhToan/5-workshop/5.6-deployment/><b>5.6. </b>Deployment
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/template_workshop_NguyenKhanhToan/6-self-evaluation/ title=Self-Assessment class=dd-item><a href=/template_workshop_NguyenKhanhToan/6-self-evaluation/><b>6. </b>Self-Assessment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/template_workshop_NguyenKhanhToan/7-feedback/ title="Sharing and Feedback" class=dd-item><a href=/template_workshop_NguyenKhanhToan/7-feedback/><b>7. </b>Sharing and Feedback
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://awsstudygroup.com><i class='fab fa-aws'></i> AWS Study Group - Blog</a></li><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://khanhtoan1325.github.io/template_workshop_NguyenKhanhToan/5-workshop/5.3-backend/ selected>English</option><option id=vi value=https://khanhtoan1325.github.io/template_workshop_NguyenKhanhToan/vi/5-workshop/5.3-backend/>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><br><br><b>Last Updated</b><br><i><font color=orange>21-07-2026</font>
+</i></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud AI Journey</a>
+</i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=/template_workshop_NguyenKhanhToan/>Internship Report</a> > <a href=/template_workshop_NguyenKhanhToan/5-workshop/>Workshop</a> > Backend Development</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#learning-objectives>Learning Objectives</a></li><li><a href=#prerequisites>Prerequisites</a></li><li><a href=#architecture-context>Architecture Context</a></li><li><a href=#step-1-application-entry-point>Step 1: Application Entry Point</a></li><li><a href=#step-2-api-router-structure>Step 2: API Router Structure</a><ul><li><a href=#main-router-configuration>Main Router Configuration</a></li></ul></li><li><a href=#step-3-video-api-endpoints>Step 3: Video API Endpoints</a><ul><li><a href=#upload-video>Upload Video</a></li><li><a href=#upload-video-sequence-flow>Upload Video Sequence Flow</a></li><li><a href=#get-video-status>Get Video Status</a></li><li><a href=#list-user-videos>List User Videos</a></li></ul></li><li><a href=#step-4-database-models>Step 4: Database Models</a><ul><li><a href=#video-model>Video Model</a></li><li><a href=#srt-model>SRT Model</a></li></ul></li><li><a href=#step-5-celery-configuration>Step 5: Celery Configuration</a><ul><li><a href=#celery-app-setup>Celery App Setup</a></li><li><a href=#video-processing-tasks>Video Processing Tasks</a></li><li><a href=#celery-task-flow>Celery Task Flow</a></li><li><a href=#error-handling--retry-mechanism>Error Handling & Retry Mechanism</a></li></ul></li><li><a href=#step-6-redis-pubsub-progress-reporter>Step 6: Redis Pub/Sub Progress Reporter</a><ul><li><a href=#progress-reporter-implementation>Progress Reporter Implementation</a></li></ul></li><li><a href=#step-7-websocket-implementation>Step 7: WebSocket Implementation</a><ul><li><a href=#websocket-endpoint>WebSocket Endpoint</a></li><li><a href=#connection-manager>Connection Manager</a></li></ul></li><li><a href=#step-8-authentication>Step 8: Authentication</a><ul><li><a href=#jwt-token-generation>JWT Token Generation</a></li><li><a href=#authenticated-endpoint>Authenticated Endpoint</a></li></ul></li><li><a href=#code-references>Code References</a></li><li><a href=#summary>Summary</a></li><li><a href=#validation>Validation</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Backend Development</h1><h1 id=workshop-53-backend-development>Workshop 5.3: Backend Development</h1><hr><h2 id=learning-objectives>Learning Objectives</h2><p>By the end of this module, you will:</p><ul><li>Understand the FastAPI application structure</li><li>Implement REST API endpoints for video management</li><li>Configure Celery for asynchronous task processing</li><li>Set up Redis Pub/Sub for real-time updates</li><li>Design database models with SQLAlchemy</li><li>Implement WebSocket endpoints for progress tracking</li><li>Understand JWT authentication flow</li></ul><hr><h2 id=prerequisites>Prerequisites</h2><ul><li>Workshop 5.1 and 5.2 completed</li><li>FastAPI framework understanding</li><li>Basic SQLAlchemy knowledge</li><li>Celery basics</li></ul><hr><h2 id=architecture-context>Architecture Context</h2><p>The backend serves as the orchestration layer between the frontend and processing workers:</p><pre tabindex=0><code>┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│   Frontend   │────▶│   FastAPI    │────▶│     S3       │
+│   (React)    │◀────│   Backend   │◀────│   Buckets    │
+└──────────────┘     └──────┬───────┘     └──────────────┘
+       ▲                    │
+       │ WebSocket          │ Celery Tasks
+       │                    ▼
+┌──────────────┐     ┌──────────────┐
+│    Redis     │◀────│   Celery     │
+│   Pub/Sub    │     │   Workers    │
+└──────────────┘     └──────────────┘
+</code></pre><hr><h2 id=step-1-application-entry-point>Step 1: Application Entry Point</h2><p>The FastAPI application is configured in <code>app/main.py</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/main.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi <span style=color:#f92672>import</span> FastAPI
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi.middleware.cors <span style=color:#f92672>import</span> CORSMiddleware
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.api.v1.api <span style=color:#f92672>import</span> api_router
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.core.database <span style=color:#f92672>import</span> engine
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.models <span style=color:#f92672>import</span> video, user  <span style=color:#75715e># Import to register models</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>app <span style=color:#f92672>=</span> FastAPI(
+</span></span><span style=display:flex><span>    title<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Video Localization API&#34;</span>,
+</span></span><span style=display:flex><span>    description<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;API for automated video translation and dubbing&#34;</span>,
+</span></span><span style=display:flex><span>    version<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1.0.0&#34;</span>
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># CORS middleware for frontend access</span>
+</span></span><span style=display:flex><span>app<span style=color:#f92672>.</span>add_middleware(
+</span></span><span style=display:flex><span>    CORSMiddleware,
+</span></span><span style=display:flex><span>    allow_origins<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;http://localhost:5173&#34;</span>],  <span style=color:#75715e># Vite dev server</span>
+</span></span><span style=display:flex><span>    allow_credentials<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>    allow_methods<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;*&#34;</span>],
+</span></span><span style=display:flex><span>    allow_headers<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;*&#34;</span>],
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Include API routes</span>
+</span></span><span style=display:flex><span>app<span style=color:#f92672>.</span>include_router(api_router, prefix<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/api/v1&#34;</span>)
+</span></span></code></pre></div><hr><h2 id=step-2-api-router-structure>Step 2: API Router Structure</h2><p>The API is organized with a router hierarchy:</p><pre tabindex=0><code>app/api/v1/
+├── api.py          # Main router
+└── endpoints/
+    ├── auth.py     # Authentication endpoints
+    ├── user.py     # User management
+    └── video.py    # Video operations
+</code></pre><img src=/template_workshop_NguyenKhanhToan/images/5-Workshop/5.3-Backend/API_Endpoints_Chi_tiet.png alt=Loi><h3 id=main-router-configuration>Main Router Configuration</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/api/v1/api.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi <span style=color:#f92672>import</span> APIRouter
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.api.v1.endpoints <span style=color:#f92672>import</span> auth, user, video
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>api_router <span style=color:#f92672>=</span> APIRouter()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>api_router<span style=color:#f92672>.</span>include_router(auth<span style=color:#f92672>.</span>router, prefix<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/auth&#34;</span>, tags<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;Authentication&#34;</span>])
+</span></span><span style=display:flex><span>api_router<span style=color:#f92672>.</span>include_router(user<span style=color:#f92672>.</span>router, prefix<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/users&#34;</span>, tags<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;Users&#34;</span>])
+</span></span><span style=display:flex><span>api_router<span style=color:#f92672>.</span>include_router(video<span style=color:#f92672>.</span>router, prefix<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/videos&#34;</span>, tags<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;Videos&#34;</span>])
+</span></span></code></pre></div><hr><h2 id=step-3-video-api-endpoints>Step 3: Video API Endpoints</h2><p>The video endpoints handle the core functionality:</p><h3 id=upload-video>Upload Video</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/api/v1/endpoints/video.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi <span style=color:#f92672>import</span> APIRouter, UploadFile, File, Depends, HTTPException
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> sqlalchemy.orm <span style=color:#f92672>import</span> Session
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.core.database <span style=color:#f92672>import</span> get_db
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.schemas.video <span style=color:#f92672>import</span> VideoCreate, VideoResponse
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.service <span style=color:#f92672>import</span> video_service
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.tasks.video_tasks <span style=color:#f92672>import</span> process_video_stage_1
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>router <span style=color:#f92672>=</span> APIRouter()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@router.post</span>(<span style=color:#e6db74>&#34;/upload&#34;</span>, response_model<span style=color:#f92672>=</span>VideoResponse)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>upload_video</span>(
+</span></span><span style=display:flex><span>    file: UploadFile <span style=color:#f92672>=</span> File(<span style=color:#f92672>...</span>),
+</span></span><span style=display:flex><span>    db: Session <span style=color:#f92672>=</span> Depends(get_db)
+</span></span><span style=display:flex><span>):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Upload a new video for processing.
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    The video is stored in S3 and a Celery task is dispatched
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    for Stage 1 processing (OCR/STT + Translation).
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Validate file type</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> file<span style=color:#f92672>.</span>content_type<span style=color:#f92672>.</span>startswith(<span style=color:#e6db74>&#34;video/&#34;</span>):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> HTTPException(
+</span></span><span style=display:flex><span>            status_code<span style=color:#f92672>=</span><span style=color:#ae81ff>400</span>,
+</span></span><span style=display:flex><span>            detail<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;File must be a video&#34;</span>
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Upload to S3</span>
+</span></span><span style=display:flex><span>    s3_key <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> video_service<span style=color:#f92672>.</span>upload_video_to_s3(file)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Create database record</span>
+</span></span><span style=display:flex><span>    video_data <span style=color:#f92672>=</span> VideoCreate(
+</span></span><span style=display:flex><span>        title<span style=color:#f92672>=</span>file<span style=color:#f92672>.</span>filename,
+</span></span><span style=display:flex><span>        file_name<span style=color:#f92672>=</span>file<span style=color:#f92672>.</span>filename,
+</span></span><span style=display:flex><span>        file_url<span style=color:#f92672>=</span><span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;s3://</span><span style=color:#e6db74>{</span>s3_key<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>,
+</span></span><span style=display:flex><span>        status<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;PROCESSING&#34;</span>
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    video <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> video_service<span style=color:#f92672>.</span>create_video(db, video_data)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Dispatch Celery task</span>
+</span></span><span style=display:flex><span>    process_video_stage_1<span style=color:#f92672>.</span>delay(
+</span></span><span style=display:flex><span>        video_id<span style=color:#f92672>=</span>str(video<span style=color:#f92672>.</span>video_id),
+</span></span><span style=display:flex><span>        s3_key<span style=color:#f92672>=</span>s3_key,
+</span></span><span style=display:flex><span>        original_filename<span style=color:#f92672>=</span>file<span style=color:#f92672>.</span>filename
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> video
+</span></span></code></pre></div><h3 id=upload-video-sequence-flow>Upload Video Sequence Flow</h3><p>!<img src=/template_workshop_NguyenKhanhToan/images/5-Workshop/5.3-Backend/Sequence_Upload_Video.png alt=Loi></p><h3 id=get-video-status>Get Video Status</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#a6e22e>@router.get</span>(<span style=color:#e6db74>&#34;/</span><span style=color:#e6db74>{video_id}</span><span style=color:#e6db74>&#34;</span>, response_model<span style=color:#f92672>=</span>VideoResponse)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_video</span>(
+</span></span><span style=display:flex><span>    video_id: str,
+</span></span><span style=display:flex><span>    db: Session <span style=color:#f92672>=</span> Depends(get_db)
+</span></span><span style=display:flex><span>):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Get video details and current processing status.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    video <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> video_service<span style=color:#f92672>.</span>get_video(db, video_id)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> video:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> HTTPException(status_code<span style=color:#f92672>=</span><span style=color:#ae81ff>404</span>, detail<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Video not found&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> video
+</span></span></code></pre></div><h3 id=list-user-videos>List User Videos</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#a6e22e>@router.get</span>(<span style=color:#e6db74>&#34;/&#34;</span>, response_model<span style=color:#f92672>=</span>list[VideoResponse])
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>list_videos</span>(
+</span></span><span style=display:flex><span>    skip: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>    limit: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>,
+</span></span><span style=display:flex><span>    db: Session <span style=color:#f92672>=</span> Depends(get_db),
+</span></span><span style=display:flex><span>    current_user: User <span style=color:#f92672>=</span> Depends(get_current_user)
+</span></span><span style=display:flex><span>):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;List all videos for the authenticated user.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    videos <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> video_service<span style=color:#f92672>.</span>get_user_videos(
+</span></span><span style=display:flex><span>        db, user_id<span style=color:#f92672>=</span>current_user<span style=color:#f92672>.</span>id, skip<span style=color:#f92672>=</span>skip, limit<span style=color:#f92672>=</span>limit
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> videos
+</span></span></code></pre></div><hr><h2 id=step-4-database-models>Step 4: Database Models</h2><h3 id=video-model>Video Model</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/models/video.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> sqlalchemy <span style=color:#f92672>import</span> Column, String, Integer, DateTime, ForeignKey, Text
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> sqlalchemy.orm <span style=color:#f92672>import</span> relationship
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> datetime <span style=color:#f92672>import</span> datetime
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.core.database <span style=color:#f92672>import</span> Base
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Video</span>(Base):
+</span></span><span style=display:flex><span>    __tablename__ <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;videos&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    id <span style=color:#f92672>=</span> Column(Integer, primary_key<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    video_id <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>36</span>), unique<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, default<span style=color:#f92672>=</span><span style=color:#66d9ef>lambda</span>: str(uuid<span style=color:#f92672>.</span>uuid4()))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># User relationship</span>
+</span></span><span style=display:flex><span>    user_id <span style=color:#f92672>=</span> Column(Integer, ForeignKey(<span style=color:#e6db74>&#34;users.id&#34;</span>))
+</span></span><span style=display:flex><span>    user <span style=color:#f92672>=</span> relationship(<span style=color:#e6db74>&#34;User&#34;</span>, back_populates<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;videos&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># File information</span>
+</span></span><span style=display:flex><span>    title <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>255</span>))
+</span></span><span style=display:flex><span>    file_name <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>255</span>))
+</span></span><span style=display:flex><span>    display_name <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>255</span>))  <span style=color:#75715e># Original filename</span>
+</span></span><span style=display:flex><span>    file_url <span style=color:#f92672>=</span> Column(Text)  <span style=color:#75715e># S3 URL for original</span>
+</span></span><span style=display:flex><span>    video_url <span style=color:#f92672>=</span> Column(Text)  <span style=color:#75715e># S3 URL for processed</span>
+</span></span><span style=display:flex><span>    video_tts_url <span style=color:#f92672>=</span> Column(Text)  <span style=color:#75715e># S3 URL for final (with TTS)</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Processing status</span>
+</span></span><span style=display:flex><span>    status <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>50</span>), default<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;PROCESSING&#34;</span>)
+</span></span><span style=display:flex><span>    processing_percentage <span style=color:#f92672>=</span> Column(Integer, default<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Subtitle information</span>
+</span></span><span style=display:flex><span>    srt_original <span style=color:#f92672>=</span> Column(Text)
+</span></span><span style=display:flex><span>    srt_translated <span style=color:#f92672>=</span> Column(Text)
+</span></span><span style=display:flex><span>    srt_translated_url <span style=color:#f92672>=</span> Column(Text)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Voice configuration</span>
+</span></span><span style=display:flex><span>    voice_used <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>100</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Thumbnail</span>
+</span></span><span style=display:flex><span>    thumbnail_url <span style=color:#f92672>=</span> Column(Text)
+</span></span><span style=display:flex><span>    thumbnail_s3_key <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>255</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Timestamps</span>
+</span></span><span style=display:flex><span>    created_at <span style=color:#f92672>=</span> Column(DateTime, default<span style=color:#f92672>=</span>datetime<span style=color:#f92672>.</span>utcnow)
+</span></span><span style=display:flex><span>    updated_at <span style=color:#f92672>=</span> Column(DateTime, default<span style=color:#f92672>=</span>datetime<span style=color:#f92672>.</span>utcnow, onupdate<span style=color:#f92672>=</span>datetime<span style=color:#f92672>.</span>utcnow)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Relationships</span>
+</span></span><span style=display:flex><span>    srt_records <span style=color:#f92672>=</span> relationship(<span style=color:#e6db74>&#34;SRT&#34;</span>, back_populates<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;video&#34;</span>, cascade<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;all, delete-orphan&#34;</span>)
+</span></span><span style=display:flex><span>    tts_records <span style=color:#f92672>=</span> relationship(<span style=color:#e6db74>&#34;VIDEO_TTS&#34;</span>, back_populates<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;video&#34;</span>, cascade<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;all, delete-orphan&#34;</span>)
+</span></span></code></pre></div><h3 id=srt-model>SRT Model</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/models/video.py (continued)</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SRT</span>(Base):
+</span></span><span style=display:flex><span>    __tablename__ <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;srt_records&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    id <span style=color:#f92672>=</span> Column(Integer, primary_key<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    video_id <span style=color:#f92672>=</span> Column(Integer, ForeignKey(<span style=color:#e6db74>&#34;videos.id&#34;</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Language pair</span>
+</span></span><span style=display:flex><span>    source_language <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>10</span>))
+</span></span><span style=display:flex><span>    target_language <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>10</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># File references</span>
+</span></span><span style=display:flex><span>    srt_original_s3_key <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>255</span>))
+</span></span><span style=display:flex><span>    srt_translated_s3_key <span style=color:#f92672>=</span> Column(String(<span style=color:#ae81ff>255</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Timestamps</span>
+</span></span><span style=display:flex><span>    created_at <span style=color:#f92672>=</span> Column(DateTime, default<span style=color:#f92672>=</span>datetime<span style=color:#f92672>.</span>utcnow)
+</span></span><span style=display:flex><span>    updated_at <span style=color:#f92672>=</span> Column(DateTime, default<span style=color:#f92672>=</span>datetime<span style=color:#f92672>.</span>utcnow, onupdate<span style=color:#f92672>=</span>datetime<span style=color:#f92672>.</span>utcnow)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Relationship</span>
+</span></span><span style=display:flex><span>    video <span style=color:#f92672>=</span> relationship(<span style=color:#e6db74>&#34;Video&#34;</span>, back_populates<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;srt_records&#34;</span>)
+</span></span></code></pre></div><hr><h2 id=step-5-celery-configuration>Step 5: Celery Configuration</h2><h3 id=celery-app-setup>Celery App Setup</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># celery.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> celery <span style=color:#f92672>import</span> Celery
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>os<span style=color:#f92672>.</span>environ<span style=color:#f92672>.</span>setdefault(<span style=color:#e6db74>&#34;DJANGO_SETTINGS_MODULE&#34;</span>, <span style=color:#e6db74>&#34;app.core.config&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>celery_app <span style=color:#f92672>=</span> Celery(
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;video_localization&#34;</span>,
+</span></span><span style=display:flex><span>    broker<span style=color:#f92672>=</span>os<span style=color:#f92672>.</span>getenv(<span style=color:#e6db74>&#34;CELERY_BROKER_URL&#34;</span>, <span style=color:#e6db74>&#34;redis://localhost:6379/0&#34;</span>),
+</span></span><span style=display:flex><span>    backend<span style=color:#f92672>=</span>os<span style=color:#f92672>.</span>getenv(<span style=color:#e6db74>&#34;CELERY_RESULT_BACKEND&#34;</span>, <span style=color:#e6db74>&#34;redis://localhost:6379/0&#34;</span>),
+</span></span><span style=display:flex><span>    include<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;app.tasks.video_tasks&#34;</span>]
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>celery_app<span style=color:#f92672>.</span>conf<span style=color:#f92672>.</span>update(
+</span></span><span style=display:flex><span>    task_serializer<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;json&#34;</span>,
+</span></span><span style=display:flex><span>    accept_content<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;json&#34;</span>],
+</span></span><span style=display:flex><span>    result_serializer<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;json&#34;</span>,
+</span></span><span style=display:flex><span>    timezone<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;UTC&#34;</span>,
+</span></span><span style=display:flex><span>    enable_utc<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>    task_track_started<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>    task_time_limit<span style=color:#f92672>=</span><span style=color:#ae81ff>3600</span>,  <span style=color:#75715e># 1 hour max</span>
+</span></span><span style=display:flex><span>    task_soft_time_limit<span style=color:#f92672>=</span><span style=color:#ae81ff>3300</span>,  <span style=color:#75715e># 55 minutes soft limit</span>
+</span></span><span style=display:flex><span>)
+</span></span></code></pre></div><h3 id=video-processing-tasks>Video Processing Tasks</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/tasks/video_tasks.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> celery <span style=color:#f92672>import</span> shared_task
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> celery.signals <span style=color:#f92672>import</span> task_prerun, task_postrun
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@celery_app.task</span>(
+</span></span><span style=display:flex><span>    bind<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>    name<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;process_video_stage_1&#34;</span>,
+</span></span><span style=display:flex><span>    autoretry_for<span style=color:#f92672>=</span>(<span style=color:#a6e22e>Exception</span>,),
+</span></span><span style=display:flex><span>    retry_kwargs<span style=color:#f92672>=</span>{<span style=color:#e6db74>&#39;max_retries&#39;</span>: <span style=color:#ae81ff>3</span>, <span style=color:#e6db74>&#39;countdown&#39;</span>: <span style=color:#ae81ff>60</span>},
+</span></span><span style=display:flex><span>    retry_backoff<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
+</span></span><span style=display:flex><span>    retry_backoff_max<span style=color:#f92672>=</span><span style=color:#ae81ff>600</span>,
+</span></span><span style=display:flex><span>    retry_jitter<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>process_video_stage_1</span>(self, video_id: str, s3_key: str, original_filename: str):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Stage 1: OCR + Translation
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    Steps:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    1. Download video from S3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    2. Validate format with FFprobe
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    3. Transcode if necessary
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    4. Extract subtitles (OCR or STT)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    5. Translate subtitles
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    6. Upload SRT to S3
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    7. Update database status
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    8. Send notification
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>from</span> app.core.database <span style=color:#f92672>import</span> SessionLocal
+</span></span><span style=display:flex><span>    <span style=color:#f92672>from</span> app.modules.video_process <span style=color:#f92672>import</span> extract_subtitles, translate_srt
+</span></span><span style=display:flex><span>    <span style=color:#f92672>from</span> app.utils.progress_reporter <span style=color:#f92672>import</span> report_progress
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    db <span style=color:#f92672>=</span> SessionLocal()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Report initial progress</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>5</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Starting video processing...&#34;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Download video from S3</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>10</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Downloading video...&#34;</span>)
+</span></span><span style=display:flex><span>        video_path <span style=color:#f92672>=</span> download_video_from_s3(s3_key)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Validate and transcode if needed</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>15</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Validating video format...&#34;</span>)
+</span></span><span style=display:flex><span>        video_analysis <span style=color:#f92672>=</span> analyze_video(video_path)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> is_format_compatible(video_analysis):
+</span></span><span style=display:flex><span>            report_progress(video_id, <span style=color:#ae81ff>20</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Transcoding video...&#34;</span>)
+</span></span><span style=display:flex><span>            video_path <span style=color:#f92672>=</span> transcode_to_mp4_h264(video_path)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Extract subtitles</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>40</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Extracting subtitles...&#34;</span>)
+</span></span><span style=display:flex><span>        subtitles <span style=color:#f92672>=</span> extract_subtitles(video_path)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Translate subtitles</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>70</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Translating subtitles...&#34;</span>)
+</span></span><span style=display:flex><span>        translated <span style=color:#f92672>=</span> translate_srt(subtitles, target_lang<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;vi&#39;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Upload to S3</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>85</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Uploading results...&#34;</span>)
+</span></span><span style=display:flex><span>        srt_url <span style=color:#f92672>=</span> upload_srt_to_s3(translated)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Update database</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>95</span>, <span style=color:#e6db74>&#34;PROCESSING&#34;</span>, <span style=color:#e6db74>&#34;Updating database...&#34;</span>)
+</span></span><span style=display:flex><span>        update_video_status(db, video_id, status<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;AWAITING_REVIEW&#34;</span>, srt_url<span style=color:#f92672>=</span>srt_url)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Send notification</span>
+</span></span><span style=display:flex><span>        report_progress(video_id, <span style=color:#ae81ff>100</span>, <span style=color:#e6db74>&#34;AWAITING_REVIEW&#34;</span>, <span style=color:#e6db74>&#34;Processing complete!&#34;</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        send_completion_email(video_id)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>finally</span>:
+</span></span><span style=display:flex><span>        db<span style=color:#f92672>.</span>close()
+</span></span></code></pre></div><h3 id=celery-task-flow>Celery Task Flow</h3><img src=/template_workshop_NguyenKhanhToan/images/5-Workshop/5.3-Backend/Luong_Celery.png alt=Loi><h3 id=error-handling--retry-mechanism>Error Handling & Retry Mechanism</h3><img src=/template_workshop_NguyenKhanhToan/images/5-Workshop/5.3-Backend/Error_Handling_Retry.png alt=Loi><hr><h2 id=step-6-redis-pubsub-progress-reporter>Step 6: Redis Pub/Sub Progress Reporter</h2><h3 id=progress-reporter-implementation>Progress Reporter Implementation</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/utils/progress_reporter.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> redis
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> typing <span style=color:#f92672>import</span> Optional
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ProgressReporter</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self):
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>redis_client <span style=color:#f92672>=</span> redis<span style=color:#f92672>.</span>Redis(host<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;localhost&#39;</span>, port<span style=color:#f92672>=</span><span style=color:#ae81ff>6379</span>, db<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>channel_prefix <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;progress&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>publish</span>(self, video_id: str, percentage: int, status: str, 
+</span></span><span style=display:flex><span>                message: str, stage: Optional[str] <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>,
+</span></span><span style=display:flex><span>                error_code: Optional[str] <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Publish progress update to Redis Pub/Sub.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        channel <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>self<span style=color:#f92672>.</span>channel_prefix<span style=color:#e6db74>}</span><span style=color:#e6db74>:</span><span style=color:#e6db74>{</span>video_id<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        data <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;video_id&#34;</span>: video_id,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;percentage&#34;</span>: percentage,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;status&#34;</span>: status,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;message&#34;</span>: message,
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> stage:
+</span></span><span style=display:flex><span>            data[<span style=color:#e6db74>&#34;stage&#34;</span>] <span style=color:#f92672>=</span> stage
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> error_code:
+</span></span><span style=display:flex><span>            data[<span style=color:#e6db74>&#34;error_code&#34;</span>] <span style=color:#f92672>=</span> error_code
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>redis_client<span style=color:#f92672>.</span>publish(channel, json<span style=color:#f92672>.</span>dumps(data))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Singleton instance</span>
+</span></span><span style=display:flex><span>progress_reporter <span style=color:#f92672>=</span> ProgressReporter()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>report_progress</span>(video_id: str, percentage: int, status: str,
+</span></span><span style=display:flex><span>                   message: str, stage: Optional[str] <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>,
+</span></span><span style=display:flex><span>                   error_code: Optional[str] <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;Convenience function for reporting progress.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    progress_reporter<span style=color:#f92672>.</span>publish(video_id, percentage, status, message, stage, error_code)
+</span></span></code></pre></div><hr><h2 id=step-7-websocket-implementation>Step 7: WebSocket Implementation</h2><h3 id=websocket-endpoint>WebSocket Endpoint</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/websocket/progress.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi <span style=color:#f92672>import</span> WebSocket, WebSocketDisconnect
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.core.socket_manager <span style=color:#f92672>import</span> ConnectionManager
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.core.security <span style=color:#f92672>import</span> verify_token
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>manager <span style=color:#f92672>=</span> ConnectionManager()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@router.websocket</span>(<span style=color:#e6db74>&#34;/ws/progress/</span><span style=color:#e6db74>{video_id}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>websocket_progress</span>(websocket: WebSocket, video_id: str, token: str <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;WebSocket endpoint for real-time progress updates.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Optional authentication</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> token:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            verify_token(token)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> websocket<span style=color:#f92672>.</span>close(code<span style=color:#f92672>=</span><span style=color:#ae81ff>4001</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>await</span> manager<span style=color:#f92672>.</span>connect(websocket, video_id)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span> <span style=color:#66d9ef>True</span>:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Keep connection alive</span>
+</span></span><span style=display:flex><span>            data <span style=color:#f92672>=</span> <span style=color:#66d9ef>await</span> websocket<span style=color:#f92672>.</span>receive_text()
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Echo back for ping/pong</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> data <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;ping&#34;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>await</span> websocket<span style=color:#f92672>.</span>send_text(<span style=color:#e6db74>&#34;pong&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>except</span> WebSocketDisconnect:
+</span></span><span style=display:flex><span>        manager<span style=color:#f92672>.</span>disconnect(websocket, video_id)
+</span></span></code></pre></div><h3 id=connection-manager>Connection Manager</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/core/socket_manager.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi <span style=color:#f92672>import</span> WebSocket
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> typing <span style=color:#f92672>import</span> Dict, Set
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> asyncio
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ConnectionManager</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self):
+</span></span><span style=display:flex><span>        <span style=color:#75715e># video_id -&gt; set of websocket connections</span>
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>active_connections: Dict[str, Set[WebSocket]] <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>redis_subscriber <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>connect</span>(self, websocket: WebSocket, video_id: str):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>await</span> websocket<span style=color:#f92672>.</span>accept()
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> video_id <span style=color:#f92672>not</span> <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>active_connections:
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>active_connections[video_id] <span style=color:#f92672>=</span> set()
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Subscribe to Redis channel for this video</span>
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>_subscribe_to_redis(video_id)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>active_connections[video_id]<span style=color:#f92672>.</span>add(websocket)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>disconnect</span>(self, websocket: WebSocket, video_id: str):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> video_id <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>active_connections:
+</span></span><span style=display:flex><span>            self<span style=color:#f92672>.</span>active_connections[video_id]<span style=color:#f92672>.</span>discard(websocket)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> self<span style=color:#f92672>.</span>active_connections[video_id]:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>del</span> self<span style=color:#f92672>.</span>active_connections[video_id]
+</span></span><span style=display:flex><span>                self<span style=color:#f92672>.</span>_unsubscribe_from_redis(video_id)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>send_to_video</span>(self, video_id: str, message: str):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;Send message to all connections watching a video.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> video_id <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>active_connections:
+</span></span><span style=display:flex><span>            dead_connections <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> connection <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>active_connections[video_id]:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>await</span> connection<span style=color:#f92672>.</span>send_text(message)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>except</span>:
+</span></span><span style=display:flex><span>                    dead_connections<span style=color:#f92672>.</span>append(connection)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Clean up dead connections</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> conn <span style=color:#f92672>in</span> dead_connections:
+</span></span><span style=display:flex><span>                self<span style=color:#f92672>.</span>disconnect(conn, video_id)
+</span></span></code></pre></div><hr><h2 id=step-8-authentication>Step 8: Authentication</h2><h3 id=jwt-token-generation>JWT Token Generation</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/core/security.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> datetime <span style=color:#f92672>import</span> datetime, timedelta
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> jose <span style=color:#f92672>import</span> JWTError, jwt
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> passlib.context <span style=color:#f92672>import</span> CryptContext
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>pwd_context <span style=color:#f92672>=</span> CryptContext(schemes<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#34;bcrypt&#34;</span>], deprecated<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;auto&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>create_access_token</span>(data: dict, expires_delta: timedelta <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>):
+</span></span><span style=display:flex><span>    to_encode <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>copy()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> expires_delta:
+</span></span><span style=display:flex><span>        expire <span style=color:#f92672>=</span> datetime<span style=color:#f92672>.</span>utcnow() <span style=color:#f92672>+</span> expires_delta
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        expire <span style=color:#f92672>=</span> datetime<span style=color:#f92672>.</span>utcnow() <span style=color:#f92672>+</span> timedelta(minutes<span style=color:#f92672>=</span><span style=color:#ae81ff>30</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    to_encode<span style=color:#f92672>.</span>update({<span style=color:#e6db74>&#34;exp&#34;</span>: expire})
+</span></span><span style=display:flex><span>    encoded_jwt <span style=color:#f92672>=</span> jwt<span style=color:#f92672>.</span>encode(
+</span></span><span style=display:flex><span>        to_encode, 
+</span></span><span style=display:flex><span>        settings<span style=color:#f92672>.</span>SECRET_KEY, 
+</span></span><span style=display:flex><span>        algorithm<span style=color:#f92672>=</span>settings<span style=color:#f92672>.</span>ALGORITHM
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> encoded_jwt
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>verify_token</span>(token: str):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>        payload <span style=color:#f92672>=</span> jwt<span style=color:#f92672>.</span>decode(token, settings<span style=color:#f92672>.</span>SECRET_KEY, algorithms<span style=color:#f92672>=</span>[settings<span style=color:#f92672>.</span>ALGORITHM])
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> payload
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>except</span> JWTError:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> HTTPException(status_code<span style=color:#f92672>=</span><span style=color:#ae81ff>401</span>, detail<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Invalid token&#34;</span>)
+</span></span></code></pre></div><h3 id=authenticated-endpoint>Authenticated Endpoint</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># app/api/v1/endpoints/auth.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi <span style=color:#f92672>import</span> Depends, HTTPException, status
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> fastapi.security <span style=color:#f92672>import</span> OAuth2PasswordBearer
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.core.security <span style=color:#f92672>import</span> verify_token
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> app.models.user <span style=color:#f92672>import</span> User
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>oauth2_scheme <span style=color:#f92672>=</span> OAuth2PasswordBearer(tokenUrl<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/api/v1/auth/login&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>async</span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_current_user</span>(token: str <span style=color:#f92672>=</span> Depends(oauth2_scheme)) <span style=color:#f92672>-&gt;</span> User:
+</span></span><span style=display:flex><span>    credentials_exception <span style=color:#f92672>=</span> HTTPException(
+</span></span><span style=display:flex><span>        status_code<span style=color:#f92672>=</span>status<span style=color:#f92672>.</span>HTTP_401_UNAUTHORIZED,
+</span></span><span style=display:flex><span>        detail<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Could not validate credentials&#34;</span>,
+</span></span><span style=display:flex><span>        headers<span style=color:#f92672>=</span>{<span style=color:#e6db74>&#34;WWW-Authenticate&#34;</span>: <span style=color:#e6db74>&#34;Bearer&#34;</span>},
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>        payload <span style=color:#f92672>=</span> verify_token(token)
+</span></span><span style=display:flex><span>        user_id: int <span style=color:#f92672>=</span> payload<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;sub&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> user_id <span style=color:#f92672>is</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>raise</span> credentials_exception
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>except</span> JWTError:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> credentials_exception
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    user <span style=color:#f92672>=</span> db<span style=color:#f92672>.</span>query(User)<span style=color:#f92672>.</span>filter(User<span style=color:#f92672>.</span>id <span style=color:#f92672>==</span> user_id)<span style=color:#f92672>.</span>first()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> user <span style=color:#f92672>is</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> credentials_exception
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> user
+</span></span></code></pre></div><hr><h2 id=code-references>Code References</h2><table><thead><tr><th style=text-align:left>Component</th><th style=text-align:left>File</th><th style=text-align:left>Purpose</th></tr></thead><tbody><tr><td style=text-align:left>Main App</td><td style=text-align:left><code>app/main.py</code></td><td style=text-align:left>FastAPI configuration</td></tr><tr><td style=text-align:left>Router</td><td style=text-align:left><code>app/api/v1/api.py</code></td><td style=text-align:left>Route organization</td></tr><tr><td style=text-align:left>Video API</td><td style=text-align:left><code>app/api/v1/endpoints/video.py</code></td><td style=text-align:left>Video CRUD operations</td></tr><tr><td style=text-align:left>Models</td><td style=text-align:left><code>app/models/video.py</code></td><td style=text-align:left>Database schema</td></tr><tr><td style=text-align:left>Celery Config</td><td style=text-align:left><code>celery.py</code></td><td style=text-align:left>Task queue setup</td></tr><tr><td style=text-align:left>Tasks</td><td style=text-align:left><code>app/tasks/video_tasks.py</code></td><td style=text-align:left>Async processing</td></tr><tr><td style=text-align:left>Progress</td><td style=text-align:left><code>app/utils/progress_reporter.py</code></td><td style=text-align:left>Redis Pub/Sub</td></tr><tr><td style=text-align:left>WebSocket</td><td style=text-align:left><code>app/websocket/progress.py</code></td><td style=text-align:left>Real-time updates</td></tr><tr><td style=text-align:left>Security</td><td style=text-align:left><code>app/core/security.py</code></td><td style=text-align:left>JWT authentication</td></tr></tbody></table><hr><h2 id=summary>Summary</h2><p>In this module, you learned:</p><ul><li><strong>FastAPI Structure</strong>: How the application is organized</li><li><strong>REST API Design</strong>: CRUD operations for video management</li><li><strong>Celery Integration</strong>: Asynchronous task processing</li><li><strong>Database Models</strong>: SQLAlchemy schema for videos and subtitles</li><li><strong>Redis Pub/Sub</strong>: Real-time progress broadcasting</li><li><strong>WebSocket</strong>: Bidirectional communication with frontend</li><li><strong>JWT Authentication</strong>: Secure API access</li></ul><hr><h2 id=validation>Validation</h2><p>Test the API endpoints:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Upload a video</span>
+</span></span><span style=display:flex><span>curl -X POST http://localhost:8000/api/v1/videos/upload <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  -H <span style=color:#e6db74>&#34;Authorization: Bearer &lt;token&gt;&#34;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  -F <span style=color:#e6db74>&#34;file=@test_video.mp4&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Check video status</span>
+</span></span><span style=display:flex><span>curl http://localhost:8000/api/v1/videos/&lt;video_id&gt; <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  -H <span style=color:#e6db74>&#34;Authorization: Bearer &lt;token&gt;&#34;</span>
+</span></span></code></pre></div><p>Monitor Celery worker logs to see task processing.</p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/template_workshop_NguyenKhanhToan/5-workshop/5.2-environment/ title="Development Environment Setup"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/template_workshop_NguyenKhanhToan/5-workshop/5.4-ai-pipeline/ title="AI/ML Pipeline" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/template_workshop_NguyenKhanhToan/js/clipboard.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/perfect-scrollbar.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/perfect-scrollbar.jquery.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/jquery.sticky.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/featherlight.min.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/highlight.pack.js?1784664106></script><script>hljs.initHighlightingOnLoad()</script><script src=/template_workshop_NguyenKhanhToan/js/modernizr.custom-3.6.0.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/learn.js?1784664106></script><script src=/template_workshop_NguyenKhanhToan/js/hugo-learn.js?1784664106></script><link href=/template_workshop_NguyenKhanhToan/mermaid/mermaid.css?1784664106 rel=stylesheet><script src=/template_workshop_NguyenKhanhToan/mermaid/mermaid.js?1784664106></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>
