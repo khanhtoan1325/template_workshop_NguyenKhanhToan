@@ -81,7 +81,7 @@ This architecture also serves as a solid foundation for integrating Business Int
 ---
 ### Link Post
 
-* [Link Xây dựng Modern Data Lakehouse (Serverless) trên AWS: Bí kíp xử lý Big Data và tối ưu 80% chi phí truy vấn với S3, Glue và Athena](https://www.facebook.com/groups/awsstudygroupfcj/posts/2203105570454403)
+* [Building Modern Data Lakehouse (Serverless) on AWS: Tips for processing Big Data and optimizing 80% of query costs with S3, Glue and AthenaLink Building Modern Data Lakehouse (Serverless) on AWS: Tips for processing Big Data and optimizing 80% of query costs with S3, Glue and Athena](https://www.facebook.com/groups/awsstudygroupfcj/posts/2203105570454403)
 
 
 ---
