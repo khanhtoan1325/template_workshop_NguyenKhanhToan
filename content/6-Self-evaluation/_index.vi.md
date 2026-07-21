@@ -6,33 +6,48 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
+Trong suốt thời gian thực tập tại **AWS Vietnam** từ **04/05/2026** đến **27/07/2026**, 
+tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường 
+vào môi trường làm việc thực tế.
 
+Tôi đã tham gia **dự án OCRVID — ứng dụng xử lý video tự động sử dụng OCR, dịch thuật 
+và lồng tiếng**, trong đó tôi phụ trách phần **hạ tầng AWS** bao gồm: triển khai cơ sở 
+dữ liệu trên Amazon RDS MySQL, lưu trữ file video và phụ đề trên Amazon S3, deploy 
+backend lên Amazon EC2 bằng Docker, cấu hình IAM, Security Group và kết nối toàn bộ 
+các dịch vụ AWS với nhau để hệ thống hoạt động ổn định.
 
-Trong suốt thời gian thực tập tại **[Tên công ty/tổ chức]** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia **[mô tả ngắn gọn dự án hoặc công việc chính]**, qua đó cải thiện kỹ năng **[liệt kê kỹ năng: lập trình, phân tích, viết báo cáo, giao tiếp…]**.  
+Qua đó tôi cải thiện được các kỹ năng: **triển khai hạ tầng cloud AWS, cấu hình bảo 
+mật IAM/Security Group, làm việc với S3 và RDS trong môi trường thực tế, sử dụng 
+Docker để containerize ứng dụng, làm việc nhóm và phân công công việc hiệu quả**.
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
+Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ được giao, tuân thủ nội quy, 
+và tích cực trao đổi với các thành viên trong nhóm để đảm bảo tiến độ dự án.
 
-Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
+Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân 
+dựa trên các tiêu chí dưới đây:
 
-
-| STT | Tiêu chí                            | Mô tả                                                                                            | Tốt | Khá | Trung bình |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | --- | --- | ---------- |
-| 1   | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, kỹ năng sử dụng công cụ, chất lượng công việc | ✅   | ☐   | ☐          |
-| 2   | **Khả năng học hỏi**                | Tiếp thu kiến thức mới, học hỏi nhanh                                                            | ☐   | ✅   | ☐          |
-| 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ✅   | ☐   | ☐          |
-| 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
-| 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ☐   | ☐   | ✅          |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ☐   | ✅   | ☐          |
-| 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ☐   | ✅   | ☐          |
-| 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
-| 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ☐   | ✅   | ☐          |
-| 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
+| STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
+| --- | -------- | ----- | --- | --- | ---------- |
+| 1 | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về AWS (S3, RDS, EC2), triển khai hạ tầng thực tế, cấu hình Docker, IAM, Security Group | ✅ | ☐ | ☐ |
+| 2 | **Khả năng học hỏi** | Tiếp thu nhanh các dịch vụ AWS mới (RDS, S3 Presigned URL, boto3), tự nghiên cứu tài liệu AWS | ☐ | ✅ | ☐ |
+| 3 | **Chủ động** | Tự tìm hiểu cách cấu hình CORS S3, IAM policy, connection pool RDS mà không cần chờ hướng dẫn | ✅ | ☐ | ☐ |
+| 4 | **Tinh thần trách nhiệm** | Đảm bảo hạ tầng AWS hoạt động ổn định, xử lý kịp thời các lỗi kết nối S3/RDS khi hệ thống gặp sự cố | ✅ | ☐ | ☐ |
+| 5 | **Kỷ luật** | Tuân thủ giờ giấc, nội quy làm việc. Còn cần cải thiện tính đúng giờ trong một số buổi họp nhóm | ☐ | ☐ | ✅ |
+| 6 | **Tính cầu tiến** | Chủ động đọc thêm tài liệu AWS Well-Architected, tìm hiểu best practice bảo mật S3 và RDS | ☐ | ✅ | ☐ |
+| 7 | **Giao tiếp** | Báo cáo tiến độ cấu hình AWS rõ ràng cho nhóm, còn cần cải thiện cách trình bày kỹ thuật cho người không chuyên | ☐ | ✅ | ☐ |
+| 8 | **Hợp tác nhóm** | Phối hợp chặt chẽ với người làm Backend để kết nối EC2 với RDS và S3, hỗ trợ nhóm debug lỗi AWS | ✅ | ☐ | ☐ |
+| 9 | **Ứng xử chuyên nghiệp** | Tôn trọng đồng nghiệp, đóng góp ý kiến xây dựng, không đùn đẩy trách nhiệm khi gặp sự cố hạ tầng | ✅ | ☐ | ☐ |
+| 10 | **Tư duy giải quyết vấn đề** | Xử lý được các lỗi S3 AllAccessDisabled, RDS connection timeout, CORS error. Cần cải thiện tư duy phân tích nguyên nhân gốc rễ | ☐ | ✅ | ☐ |
+| 11 | **Đóng góp vào dự án/tổ chức** | Thiết lập toàn bộ hạ tầng AWS cho dự án OCRVID, giúp hệ thống lưu trữ và xử lý video hoạt động ổn định trên cloud | ✅ | ☐ | ☐ |
+| 12 | **Tổng thể** | Hoàn thành tốt nhiệm vụ phụ trách AWS, đóng góp thực chất vào dự án nhóm, tích lũy được nhiều kinh nghiệm thực tế | ✅ | ☐ | ☐ |
 
 ### Cần cải thiện
 
-* Nâng cao tính kỹ luật, chấp hành nghiêm chỉnh nội quy của công ty hoặc bất kỳ trong một tổ chức nào
-* Cải thiện trong cách tư duy giải quyết vấn đề
-* Học cách giao tiếp tốt hơn trong giao tiếp hằng ngày và trong công việc, xử lý tình huống
+- **Kỷ luật giờ giấc**: Cần chấp hành nghiêm chỉnh giờ làm việc và các buổi họp nhóm, 
+  tránh để ảnh hưởng đến tiến độ chung của team
+- **Tư duy phân tích vấn đề**: Khi gặp lỗi hạ tầng cần dừng lại phân tích nguyên nhân 
+  gốc rễ thay vì thử giải pháp ngẫu nhiên, áp dụng quy trình debug có hệ thống hơn
+- **Kỹ năng giao tiếp kỹ thuật**: Cần cải thiện khả năng giải thích các vấn đề kỹ thuật 
+  AWS một cách đơn giản, dễ hiểu cho các thành viên nhóm không phụ trách hạ tầng
+- **Kiến thức AWS nâng cao**: Tiếp tục học thêm về CloudWatch (monitoring), Auto Scaling, 
+  VPC để nâng cao chất lượng hạ tầng trong các dự án tiếp theo
