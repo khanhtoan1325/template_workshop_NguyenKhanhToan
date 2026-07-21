@@ -25,8 +25,9 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 06/05/2026 đến ngày 27/7/2026
 
-![Ảnh đại diện của bạn](images/top.jpg)
 
+
+{{< image src="images/top.jpg" alt="Video Localization Platform Architecture" >}}
 
 
 ### Nội dung báo cáo
